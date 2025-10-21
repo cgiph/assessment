@@ -3,402 +3,478 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Skilled-Jobs English: Reading & Writing Tests (A1, A2, B1)</title>
+  <title>Skilled-Jobs English: Reading & Writing Tests</title>
   <style>
-    :root{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
-    body{max-width:1000px;margin:28px auto;padding:20px;line-height:1.45;color:#111}
-    header{display:flex;align-items:center;gap:16px}
-    h1{font-size:1.6rem;margin:0}
-    .level{border:1px solid #e2e8f0;border-radius:10px;padding:16px;margin:18px 0;background:#fbfdff}
-    h2{margin-top:0}
-    .passage{background:#fff;padding:12px;border-radius:8px;border:1px solid #eef2f7;margin-bottom:12px}
-    .questions{margin-top:8px}
-    .question{margin:10px 0;padding:10px;border-left:3px solid #c7d2fe;background:#fcfcff;border-radius:6px}
-    label{display:block;cursor:pointer}
-    .short-answer{width:100%;min-height:48px}
+    /* Simple, exam-like styling */
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:#0f172a;}
+    body{max-width:900px;margin:28px auto;padding:20px;background:#fff}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{font-size:1.25rem;margin:0}
+    .name-field{font-size:0.95rem;border:1px solid #cbd5e1;border-radius:6px;padding:6px;width:260px}
+    .level{border:1px solid #dbe7f7;border-radius:8px;padding:14px;margin:18px 0;background:#ffffff}
+    h2{font-size:1.05rem;margin:6px 0}
+    .passage{background:#fafafa;padding:10px;border-radius:6px;border:1px solid #eef2f7;margin-bottom:10px;font-size:0.95rem}
+    .question{margin:8px 0;padding:8px;border-left:3px solid #e6eef8;background:transparent;border-radius:4px}
+    label{display:block;cursor:pointer;margin:3px 0}
+    .short-answer{width:100%;min-height:44px;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
     .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    button{background:#2563eb;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
-    button.secondary{background:#64748b}
-    .result{margin-top:12px;padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e6eef8}
-    .rubric{font-size:0.95rem;background:#fff;padding:10px;border-radius:8px;border:1px dashed #e2e8f0;margin-top:8px}
-    textarea{width:100%;min-height:140px;padding:8px;border-radius:8px;border:1px solid #e6eef8}
-    .meta{font-size:0.9rem;color:#334155}
-    footer{margin-top:28px;font-size:0.9rem;color:#475569}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+    button{background:#0f172a;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+    .result{margin-top:12px;padding:10px;border-radius:6px;background:#f8fafc;border:1px solid #e6eef8;font-size:0.95rem}
+    textarea{width:100%;min-height:140px;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
+    .hint{font-size:0.9rem;color:#0f172a;background:#fbfbfb;padding:10px;border-radius:6px;border:1px solid #eef2f7}
+    footer{margin-top:22px;font-size:0.9rem;color:#334155}
+    .hidden{display:none}
+    @media (max-width:700px){header{flex-direction:column;align-items:flex-start} .name-field{width:100%}}
   </style>
 </head>
 <body>
   <header>
-    <h1>Skilled-Jobs English Tests — Reading & Writing (A1, A2, B1)</h1>
+    <h1>Skilled-Jobs English — Reading & Writing</h1>
+    <div>
+      <label for="candidateName"><strong>Candidate Name:</strong></label><br>
+      <input id="candidateName" class="name-field" type="text" placeholder="Write your full name here">
+    </div>
   </header>
 
-  <p class="meta">Instructions for examiners: each candidate completes the reading sections (choose 1 or all depending on time) and the writing tasks. Multiple-choice questions are auto-graded; writing tasks show word count and checklist-based rubric for manual scoring.</p>
+  <p class="hint"><strong>Instructions:</strong> Complete all sections. After finishing, follow Final Instructions at the bottom to export your results and send them to the examiner.</p>
 
-  <!-- A1 Level -->
-  <section class="level" id="A1">
-    <h2>A1 — Beginner: Reading Comprehension (2 short tests)</h2>
-
-    <!-- Test 1 -->
-    <div class="passage">
-      <strong>Test 1 — Passage (A1)</strong>
-      <p>Anna works in a small bakery. Every morning she opens the shop at 6:00 a.m. She bakes bread and sells coffee. Her friend Mark helps on weekends. The bakery is near a bus stop, so many people come to buy breakfast.</p>
+  <!-- A1 Test 1 -->
+  <section class="level" id="A1T1">
+    <h2>A1 — Reading Test 1</h2>
+    <div class="passage"><strong>Passage:</strong> Anna works in a small bakery. Every morning she opens the shop at 6:00 a.m. She bakes bread and sells coffee. Her friend Mark helps on weekends. The bakery is near a bus stop, so many people come to buy breakfast.</div>
+    <div class="question">
+      <label>1) What time does Anna open the shop?</label>
+      <label><input type="radio" name="a1t1_q1" value="5"> 5:00 a.m.</label>
+      <label><input type="radio" name="a1t1_q1" value="6"> 6:00 a.m.</label>
+      <label><input type="radio" name="a1t1_q1" value="7"> 7:00 a.m.</label>
     </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> What time does Anna open the shop?</div>
-        <label><input type="radio" name="a1t1q1" value="5"> 5:00 a.m.</label>
-        <label><input type="radio" name="a1t1q1" value="6"> 6:00 a.m.</label>
-        <label><input type="radio" name="a1t1q1" value="7"> 7:00 a.m.</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Who helps Anna on weekends?</div>
-        <label><input type="radio" name="a1t1q2" value="mark"> Mark</label>
-        <label><input type="radio" name="a1t1q2" value="john"> John</label>
-        <label><input type="radio" name="a1t1q2" value="no"> No one</label>
-      </div>
-
-      <div class="question">
-        <div><strong>3.</strong> Short answer: Where is the bakery located?</div>
-        <input class="short-answer" type="text" id="a1t1q3" placeholder="Type a short answer... (e.g., near a bus stop)">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeA1T1()">Grade Test 1 (A1)</button>
-        <button class="secondary" onclick="resetA1T1()">Reset</button>
-      </div>
-
-      <div class="result" id="a1t1result" aria-live="polite"></div>
+    <div class="question">
+      <label>2) Who helps Anna on weekends?</label>
+      <label><input type="radio" name="a1t1_q2" value="mark"> Mark</label>
+      <label><input type="radio" name="a1t1_q2" value="john"> John</label>
+      <label><input type="radio" name="a1t1_q2" value="noone"> No one</label>
     </div>
-
-    <hr>
-
-    <!-- Test 2 -->
-    <div class="passage">
-      <strong>Test 2 — Passage (A1)</strong>
-      <p>Tom is a plumber. He fixes taps and pipes. Today he goes to a house. The family says thank you because the water works again. Tom has lunch at 12:30 and returns to the office at 2:00.</p>
+    <div class="question">
+      <label>3) Short answer — Where is the bakery located?</label>
+      <input id="a1t1_q3" class="short-answer" placeholder="e.g., near a bus stop">
     </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> What is Tom's job?</div>
-        <label><input type="radio" name="a1t2q1" value="teacher"> Teacher</label>
-        <label><input type="radio" name="a1t2q1" value="plumber"> Plumber</label>
-        <label><input type="radio" name="a1t2q1" value="driver"> Driver</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Short answer: When does Tom have lunch?</div>
-        <input class="short-answer" type="text" id="a1t2q2" placeholder="e.g., 12:30">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeA1T2()">Grade Test 2 (A1)</button>
-        <button class="secondary" onclick="resetA1T2()">Reset</button>
-      </div>
-
-      <div class="result" id="a1t2result" aria-live="polite"></div>
-    </div>
+    <div class="controls"><button id="btnA1T1">Submit A1 Test 1</button></div>
+    <div id="resA1T1" class="result" aria-live="polite"></div>
   </section>
 
-  <!-- A2 Level -->
-  <section class="level" id="A2">
-    <h2>A2 — Elementary: Reading Comprehension (2 short tests)</h2>
-
-    <!-- Test 1 -->
-    <div class="passage">
-      <strong>Test 1 — Passage (A2)</strong>
-      <p>Maria moved to Sydney last year to work as an electrician. She likes the city because she can walk to the beach on weekends. On weekdays she travels by train. Maria studies for a trade certificate in the evenings and hopes to become a team leader in two years.</p>
+  <!-- A1 Test 2 -->
+  <section class="level" id="A1T2">
+    <h2>A1 — Reading Test 2</h2>
+    <div class="passage"><strong>Passage:</strong> Tom is a plumber. He fixes taps and pipes. Today he goes to a house. The family says thank you because the water works again. Tom has lunch at 12:30 and returns to the office at 2:00.</div>
+    <div class="question">
+      <label>1) What is Tom's job?</label>
+      <label><input type="radio" name="a1t2_q1" value="teacher"> Teacher</label>
+      <label><input type="radio" name="a1t2_q1" value="plumber"> Plumber</label>
+      <label><input type="radio" name="a1t2_q1" value="driver"> Driver</label>
     </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> Why does Maria like the city?</div>
-        <label><input type="radio" name="a2t1q1" value="food"> Because of the food</label>
-        <label><input type="radio" name="a2t1q1" value="beach"> Because she can walk to the beach</label>
-        <label><input type="radio" name="a2t1q1" value="train"> Because trains are cheap</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Short answer: What does Maria hope to become?</div>
-        <input class="short-answer" type="text" id="a2t1q2" placeholder="e.g., a team leader">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeA2T1()">Grade Test 1 (A2)</button>
-        <button class="secondary" onclick="resetA2T1()">Reset</button>
-      </div>
-
-      <div class="result" id="a2t1result" aria-live="polite"></div>
+    <div class="question">
+      <label>2) Short answer — When does Tom have lunch?</label>
+      <input id="a1t2_q2" class="short-answer" placeholder="e.g., 12:30">
     </div>
-
-    <hr>
-
-    <!-- Test 2 -->
-    <div class="passage">
-      <strong>Test 2 — Passage (A2)</strong>
-      <p>Job ads often ask for two things: experience and a current visa. If the applicant has experience but no visa, it is difficult to hire them. Many employers prefer candidates who can start quickly and speak clear English.</p>
-    </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> What do job ads often ask for?</div>
-        <label><input type="radio" name="a2t2q1" value="salary"> High salary</label>
-        <label><input type="radio" name="a2t2q1" value="experience"> Experience and a current visa</label>
-        <label><input type="radio" name="a2t2q1" value="location"> A car</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Short answer: Why do employers prefer some candidates?</div>
-        <input class="short-answer" type="text" id="a2t2q2" placeholder="e.g., they can start quickly and speak clear English">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeA2T2()">Grade Test 2 (A2)</button>
-        <button class="secondary" onclick="resetA2T2()">Reset</button>
-      </div>
-
-      <div class="result" id="a2t2result" aria-live="polite"></div>
-    </div>
+    <div class="controls"><button id="btnA1T2">Submit A1 Test 2</button></div>
+    <div id="resA1T2" class="result" aria-live="polite"></div>
   </section>
 
-  <!-- B1 Level -->
-  <section class="level" id="B1">
-    <h2>B1 — Intermediate: Reading Comprehension (2 tests)</h2>
-
-    <!-- Test 1 -->
-    <div class="passage">
-      <strong>Test 1 — Passage (B1)</strong>
-      <p>Many skilled workers move between cities to follow job opportunities. Relocating can be positive — it often brings higher pay and new skills — but it also has costs: finding housing, changing schools for children, and the time needed to settle in. Employers who offer relocation support are more likely to attract experienced candidates. Some companies give a relocation allowance, others help with temporary accommodation.</p>
+  <!-- A2 Test 1 -->
+  <section class="level" id="A2T1">
+    <h2>A2 — Reading Test 1</h2>
+    <div class="passage"><strong>Passage:</strong> Maria moved to Sydney last year to work as an electrician. She likes the city because she can walk to the beach on weekends. On weekdays she travels by train. Maria studies for a trade certificate in the evenings and hopes to become a team leader in two years.</div>
+    <div class="question">
+      <label>1) Why does Maria like the city?</label>
+      <label><input type="radio" name="a2t1_q1" value="food"> Because of the food</label>
+      <label><input type="radio" name="a2t1_q1" value="beach"> Because she can walk to the beach</label>
+      <label><input type="radio" name="a2t1_q1" value="train"> Because trains are cheap</label>
     </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> Which of the following is NOT listed as a cost of relocating?</div>
-        <label><input type="radio" name="b1t1q1" value="housing"> Finding housing</label>
-        <label><input type="radio" name="b1t1q1" value="schools"> Changing schools for children</label>
-        <label><input type="radio" name="b1t1q1" value="language"> Learning a new language</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Short answer: How do some companies support relocating employees?</div>
-        <input class="short-answer" type="text" id="b1t1q2" placeholder="e.g., with a relocation allowance or temporary accommodation">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeB1T1()">Grade Test 1 (B1)</button>
-        <button class="secondary" onclick="resetB1T1()">Reset</button>
-      </div>
-
-      <div class="result" id="b1t1result" aria-live="polite"></div>
+    <div class="question">
+      <label>2) Short answer — What does Maria hope to become?</label>
+      <input id="a2t1_q2" class="short-answer" placeholder="e.g., a team leader">
     </div>
-
-    <hr>
-
-    <!-- Test 2 -->
-    <div class="passage">
-      <strong>Test 2 — Passage (B1)</strong>
-      <p>Workplace safety is important in trades such as construction and manufacturing. Australian regulations require employers to provide protective equipment and training. Workers should report hazards immediately so managers can act. Regular safety meetings help teams stay aware of risks and improve procedures.</p>
-    </div>
-
-    <div class="questions">
-      <div class="question">
-        <div><strong>1.</strong> What must employers provide according to the passage?</div>
-        <label><input type="radio" name="b1t2q1" value="equipment"> Protective equipment and training</label>
-        <label><input type="radio" name="b1t2q1" value="salary"> Higher salaries</label>
-        <label><input type="radio" name="b1t2q1" value="lodging"> Lodging</label>
-      </div>
-
-      <div class="question">
-        <div><strong>2.</strong> Short answer: Why are regular safety meetings useful?</div>
-        <input class="short-answer" type="text" id="b1t2q2" placeholder="e.g., to stay aware of risks and improve procedures">
-      </div>
-
-      <div class="controls">
-        <button onclick="gradeB1T2()">Grade Test 2 (B1)</button>
-        <button class="secondary" onclick="resetB1T2()">Reset</button>
-      </div>
-
-      <div class="result" id="b1t2result" aria-live="polite"></div>
-    </div>
+    <div class="controls"><button id="btnA2T1">Submit A2 Test 1</button></div>
+    <div id="resA2T1" class="result" aria-live="polite"></div>
   </section>
 
-  <!-- Writing Tests -->
-  <section class="level" id="writing">
-    <h2>Writing Tests — Essay & Email (for skilled-job applicants)</h2>
-    <p class="meta">Candidates should do both tasks. For Australia skilled-job assessment, encourage clear organization, relevant ideas, and appropriate tone. Use the rubric below for marking.</p>
-
-    <div class="rubric">
-      <strong>Writing Rubric (suggested):</strong>
-      <ul>
-        <li><strong>Task Response / Content (0–6):</strong> relevance, development of ideas, completeness.</li>
-        <li><strong>Coherence & Cohesion (0–4):</strong> clear paragraphing, logical flow, linking words.</li>
-        <li><strong>Range & Accuracy of Grammar (0–6):</strong> correct sentence structures, verb tenses.</li>
-        <li><strong>Vocabulary & Spelling (0–4):</strong> appropriate word choice, correct spelling.</li>
-      </ul>
-      <p>Total suggested score: 0–20 (convert to your preferred scale).</p>
+  <!-- A2 Test 2 -->
+  <section class="level" id="A2T2">
+    <h2>A2 — Reading Test 2</h2>
+    <div class="passage"><strong>Passage:</strong> Job ads often ask for two things: experience and a current visa. If the applicant has experience but no visa, it is difficult to hire them. Many employers prefer candidates who can start quickly and speak clear English.</div>
+    <div class="question">
+      <label>1) What do job ads often ask for?</label>
+      <label><input type="radio" name="a2t2_q1" value="salary"> High salary</label>
+      <label><input type="radio" name="a2t2_q1" value="experience"> Experience and a current visa</label>
+      <label><input type="radio" name="a2t2_q1" value="location"> A car</label>
     </div>
-
-    <hr>
-
-    <!-- Essay Task -->
-    <div>
-      <h3>Essay (recommended 200–300 words)</h3>
-      <p><strong>Prompt:</strong> "Describe a time when you improved a process at work. Explain what the problem was, what steps you took to change the process, and what the result was. If you could do it again, what would you change?"</p>
-      <p class="meta">Purpose: test organisation, range of vocabulary related to work, use of past tenses and conditional language.</p>
-      <textarea id="essayText" placeholder="Write your essay here... (200–300 words recommended)"></textarea>
-      <div class="controls">
-        <button onclick="checkEssay()">Check Essay (word count + basic checks)</button>
-        <button class="secondary" onclick="clearEssay()">Clear</button>
-      </div>
-      <div class="result" id="essayResult"></div>
+    <div class="question">
+      <label>2) Short answer — Why do employers prefer some candidates?</label>
+      <input id="a2t2_q2" class="short-answer" placeholder="e.g., they can start quickly and speak clear English">
     </div>
-
-    <hr>
-
-    <!-- Email Task -->
-    <div>
-      <h3>Formal Email (recommended 80–150 words)</h3>
-      <p><strong>Prompt:</strong> "You have been offered a skilled-job interview in Australia but the time clashes with your current job. Write a polite email to the recruitment officer asking to reschedule the interview and provide two alternative dates and times."</p>
-      <p class="meta">Purpose: test register (formal tone), clarity, ability to propose alternatives.</p>
-      <textarea id="emailText" placeholder="Write your email here... (80–150 words recommended)"></textarea>
-      <div class="controls">
-        <button onclick="checkEmail()">Check Email (word count + tone hints)</button>
-        <button class="secondary" onclick="clearEmail()">Clear</button>
-      </div>
-      <div class="result" id="emailResult"></div>
-    </div>
-
-    <div class="rubric">
-      <strong>Suggested Examiner Checklist (use for manual marking)</strong>
-      <ol>
-        <li>Does the writing fully answer the prompt?</li>
-        <li>Is the structure clear (intro, body, conclusion / opening, ask, alternatives, closing)?</li>
-        <li>Are there frequent grammar errors that impede understanding?</li>
-        <li>Is vocabulary appropriate for a workplace / professional email?</li>
-        <li>Word count within recommended range?</li>
-      </ol>
-    </div>
+    <div class="controls"><button id="btnA2T2">Submit A2 Test 2</button></div>
+    <div id="resA2T2" class="result" aria-live="polite"></div>
   </section>
+
+  <!-- B1 Test 1 -->
+  <section class="level" id="B1T1">
+    <h2>B1 — Reading Test 1</h2>
+    <div class="passage"><strong>Passage:</strong> Many skilled workers move between cities to follow job opportunities. Relocating can be positive — it often brings higher pay and new skills — but it also has costs: finding housing, changing schools for children, and the time needed to settle in. Employers who offer relocation support are more likely to attract experienced candidates. Some companies give a relocation allowance, others help with temporary accommodation.</div>
+    <div class="question">
+      <label>1) Which of the following is NOT listed as a cost of relocating?</label>
+      <label><input type="radio" name="b1t1_q1" value="housing"> Finding housing</label>
+      <label><input type="radio" name="b1t1_q1" value="schools"> Changing schools for children</label>
+      <label><input type="radio" name="b1t1_q1" value="language"> Learning a new language</label>
+    </div>
+    <div class="question">
+      <label>2) Short answer — How do some companies support relocating employees?</label>
+      <input id="b1t1_q2" class="short-answer" placeholder="e.g., with a relocation allowance or temporary accommodation">
+    </div>
+    <div class="controls"><button id="btnB1T1">Submit B1 Test 1</button></div>
+    <div id="resB1T1" class="result" aria-live="polite"></div>
+  </section>
+
+  <!-- B1 Test 2 -->
+  <section class="level" id="B1T2">
+    <h2>B1 — Reading Test 2</h2>
+    <div class="passage"><strong>Passage:</strong> Workplace safety is important in trades such as construction and manufacturing. Australian regulations require employers to provide protective equipment and training. Workers should report hazards immediately so managers can act. Regular safety meetings help teams stay aware of risks and improve procedures.</div>
+    <div class="question">
+      <label>1) What must employers provide according to the passage?</label>
+      <label><input type="radio" name="b1t2_q1" value="equipment"> Protective equipment and training</label>
+      <label><input type="radio" name="b1t2_q1" value="salary"> Higher salaries</label>
+      <label><input type="radio" name="b1t2_q1" value="lodging"> Lodging</label>
+    </div>
+    <div class="question">
+      <label>2) Short answer — Why are regular safety meetings useful?</label>
+      <input id="b1t2_q2" class="short-answer" placeholder="e.g., to stay aware of risks and improve procedures">
+    </div>
+    <div class="controls"><button id="btnB1T2">Submit B1 Test 2</button></div>
+    <div id="resB1T2" class="result" aria-live="polite"></div>
+  </section>
+
+  <!-- Writing: Essay -->
+  <section class="level" id="WritingEssay">
+    <h2>Writing — Essay</h2>
+    <div class="passage"><strong>Task:</strong> Describe a time when you improved a process at work. Explain what the problem was, what steps you took, and what the result was. Write 150–300 words if possible.</div>
+    <textarea id="essayText" placeholder="Write your essay here..."></textarea>
+    <div class="rubric"><strong>Suggested scoring guide:</strong> Content (0–6), Coherence (0–4), Grammar (0–6), Vocabulary & Spelling (0–4) — Total 20</div>
+    <div class="controls"><button id="btnEssay">Submit Essay</button></div>
+    <div id="resEssay" class="result" aria-live="polite"></div>
+  </section>
+
+  <!-- Writing: Email -->
+  <section class="level" id="WritingEmail">
+    <h2>Writing — Formal Email</h2>
+    <div class="passage"><strong>Task:</strong> Write a polite email to a recruitment officer to ask to reschedule a job interview. Provide two alternative dates/times. Suggested 80–150 words.</div>
+    <textarea id="emailText" placeholder="Write your email here..."></textarea>
+    <div class="rubric"><strong>Suggested scoring guide:</strong> Task (0–5), Tone/Structure (0–5), Grammar (0–5), Clarity (0–5) — Total 20</div>
+    <div class="controls"><button id="btnEmail">Submit Email</button></div>
+    <div id="resEmail" class="result" aria-live="polite"></div>
+  </section>
+
+  <div class="hint" id="finalInstructions">
+    <strong>Final instructions (candidates):</strong>
+    <ol>
+      <li>Type your <strong>full name</strong> in the Candidate Name field at the top.</li>
+      <li>When you have finished all sections, press <strong>Ctrl + Alt + E</strong> to unlock Examiner Tools.</li>
+      <li>Click <strong>Export Results to PDF</strong>. A confirmation will ask you to check your name. If you continue, a printable page opens and your browser's Print dialog will appear. Choose “Save as PDF” (or Print → Save as PDF) and save the file. The print dialog will suggest a filename that includes your name automatically.</li>
+      <li>Send the saved PDF to: <strong>susan.centino@cirrusrecruitment.com</strong> or send via Messenger if you do not have an email account.</li>
+    </ol>
+  </div>
 
   <footer>
-    <p>Tip: For official assessment use, combine these tests with an oral interview and human marking for writing. Automated checks here are supportive only.</p>
+    <p>Results are saved locally on your device. Examiner tools (clear/export) are hidden until unlocked.</p>
+
+    <div id="adminControls" class="hidden">
+      <button id="btnClearData">Clear Candidate Data</button>
+      <button id="btnExportPDF">Export Results to PDF</button>
+    </div>
+    <div id="postExportMsg" class="result hidden" aria-live="polite"></div>
   </footer>
 
   <script>
-    // Utility: simple normalization for short answers
-    function normalize(s){return String(s||"").trim().toLowerCase();}
+    /* Helper utilities */
+    function normalize(s){ return String(s||'').trim().toLowerCase(); }
+    function wordsCount(s){ if(!s) return 0; return s.trim().split(/\s+/).filter(Boolean).length; }
 
-    // A1 Test 1
+    /* Persistence */
+    function persist(candidateName, key, value){
+      if(!candidateName) candidateName='(No name)';
+      const storeKey = 'skilledtest_' + candidateName;
+      let obj = {};
+      try { obj = JSON.parse(localStorage.getItem(storeKey)) || {}; } catch(e) { obj = {}; }
+      obj[key] = value;
+      localStorage.setItem(storeKey, JSON.stringify(obj));
+    }
+    function loadStored(candidateName){
+      if(!candidateName) candidateName='(No name)';
+      const storeKey = 'skilledtest_' + candidateName;
+      try { return JSON.parse(localStorage.getItem(storeKey)) || {}; } catch(e) { return {}; }
+    }
+
+    /* Save visible result and persist score object */
+    function saveResult(domId, score, total, notes){
+      const name = document.getElementById('candidateName').value.trim() || '(No name)';
+      const el = document.getElementById(domId);
+      el.innerHTML = `<strong>Candidate:</strong> ${name} <br><strong>Score:</strong> ${score}/${total} <br><strong>Notes:</strong> ${notes.join(' ')}`;
+      persist(name, domId, { score, total, notes, timestamp: new Date().toISOString() });
+      updateOverallSummary(name);
+    }
+
+    function updateOverallSummary(name){
+      const data = loadStored(name);
+      let gained=0, possible=0;
+      for(const k in data){
+        if(data[k] && typeof data[k].score === 'number'){ gained += data[k].score; possible += data[k].total; }
+      }
+      let summaryEl = document.getElementById('overallSummary');
+      if(!summaryEl){ summaryEl = document.createElement('div'); summaryEl.id='overallSummary'; summaryEl.className='result'; document.body.appendChild(summaryEl); }
+      if(possible > 0){
+        const pct = Math.round((gained/possible)*100);
+        let level = 'Unassessed';
+        if(pct >= 85) level='B1+'; else if(pct >= 70) level='B1'; else if(pct >=50) level='A2'; else level='A1 or below';
+        summaryEl.innerHTML = `<strong>Candidate:</strong> ${name} <br><strong>Total:</strong> ${gained}/${possible} (${pct}%) <br><strong>Suggested level:</strong> ${level}`;
+        persist(name, 'overallSummary', { score:gained, total:possible, pct, level, timestamp:new Date().toISOString() });
+      } else {
+        summaryEl.innerHTML = `<strong>Candidate:</strong> ${name} <br><em>No submissions yet.</em>`;
+      }
+    }
+
+    /* ========== Reading grading ========== */
     function gradeA1T1(){
-      const q1 = document.querySelector('input[name="a1t1q1"]:checked');
-      const q2 = document.querySelector('input[name="a1t1q2"]:checked');
-      const q3 = normalize(document.getElementById('a1t1q3').value);
       let score=0, total=3, notes=[];
-      if(q1 && q1.value==='6'){score++;} else notes.push('Q1 should be 6:00 a.m.');
-      if(q2 && q2.value==='mark'){score++;} else notes.push('Q2 should be Mark.');
-      if(q3.includes('bus')){score++;} else notes.push('Q3 expected "near a bus stop" or similar.');
-      document.getElementById('a1t1result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
+      const q1 = document.querySelector('input[name="a1t1_q1"]:checked');
+      const q2 = document.querySelector('input[name="a1t1_q2"]:checked');
+      const q3 = normalize(document.getElementById('a1t1_q3').value);
+      if(q1 && q1.value === '6') score++; else notes.push('Q1 expected 6:00 a.m.');
+      if(q2 && q2.value === 'mark') score++; else notes.push('Q2 expected Mark.');
+      if(q3.includes('bus')) score++; else notes.push('Q3 expected near a bus stop.');
+      saveResult('resA1T1', score, total, notes);
     }
-    function resetA1T1(){document.querySelectorAll('input[name="a1t1q1"], input[name="a1t1q2"]').forEach(i=>i.checked=false);document.getElementById('a1t1q3').value='';document.getElementById('a1t1result').innerHTML='';}
 
-    // A1 Test 2
     function gradeA1T2(){
-      const q1 = document.querySelector('input[name="a1t2q1"]:checked');
-      const q2 = normalize(document.getElementById('a1t2q2').value);
-      let score=0,total=2,notes=[];
-      if(q1 && q1.value==='plumber'){score++;} else notes.push('Q1 should be Plumber.');
-      if(q2.includes('12') || q2.includes('12:30')){score++;} else notes.push('Q2 expected "12:30" or similar.');
-      document.getElementById('a1t2result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
+      let score=0, total=2, notes=[];
+      const q1 = document.querySelector('input[name="a1t2_q1"]:checked');
+      const q2 = normalize(document.getElementById('a1t2_q2').value);
+      if(q1 && q1.value === 'plumber') score++; else notes.push('Q1 expected Plumber.');
+      if(q2.includes('12') || q2.includes('12:30')) score++; else notes.push('Q2 expected 12:30.');
+      saveResult('resA1T2', score, total, notes);
     }
-    function resetA1T2(){document.querySelectorAll('input[name="a1t2q1"]').forEach(i=>i.checked=false);document.getElementById('a1t2q2').value='';document.getElementById('a1t2result').innerHTML='';}
 
-    // A2 Test 1
     function gradeA2T1(){
-      const q1 = document.querySelector('input[name="a2t1q1"]:checked');
-      const q2 = normalize(document.getElementById('a2t1q2').value);
-      let score=0,total=2,notes=[];
-      if(q1 && q1.value==='beach'){score++;} else notes.push('Q1 should be: Because she can walk to the beach.');
-      if(q2.includes('team')){score++;} else notes.push('Q2 expected "team leader" or similar.');
-      document.getElementById('a2t1result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
+      let score=0, total=2, notes=[];
+      const q1 = document.querySelector('input[name="a2t1_q1"]:checked');
+      const q2 = normalize(document.getElementById('a2t1_q2').value);
+      if(q1 && q1.value === 'beach') score++; else notes.push('Q1 expected beach.');
+      if(q2.includes('team')) score++; else notes.push('Q2 expected team leader.');
+      saveResult('resA2T1', score, total, notes);
     }
-    function resetA2T1(){document.querySelectorAll('input[name="a2t1q1"]').forEach(i=>i.checked=false);document.getElementById('a2t1q2').value='';document.getElementById('a2t1result').innerHTML='';}
 
-    // A2 Test 2
     function gradeA2T2(){
-      const q1 = document.querySelector('input[name="a2t2q1"]:checked');
-      const q2 = normalize(document.getElementById('a2t2q2').value);
-      let score=0,total=2,notes=[];
-      if(q1 && q1.value==='experience'){score++;} else notes.push('Q1 should be experience and a current visa.');
-      if(q2.includes('start')||q2.includes('quick')||q2.includes('speak')){score++;} else notes.push('Q2 expected "they can start quickly and speak clear English" or similar.');
-      document.getElementById('a2t2result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
+      let score=0, total=2, notes=[];
+      const q1 = document.querySelector('input[name="a2t2_q1"]:checked');
+      const q2 = normalize(document.getElementById('a2t2_q2').value);
+      if(q1 && q1.value === 'experience') score++; else notes.push('Q1 expected experience and a current visa.');
+      if(q2.includes('start') || q2.includes('quick') || q2.includes('speak')) score++; else notes.push('Q2 expected start quickly and speak clear English.');
+      saveResult('resA2T2', score, total, notes);
     }
-    function resetA2T2(){document.querySelectorAll('input[name="a2t2q1"]').forEach(i=>i.checked=false);document.getElementById('a2t2q2').value='';document.getElementById('a2t2result').innerHTML='';}
 
-    // B1 Test 1
     function gradeB1T1(){
-      const q1 = document.querySelector('input[name="b1t1q1"]:checked');
-      const q2 = normalize(document.getElementById('b1t1q2').value);
-      let score=0,total=2,notes=[];
-      if(q1 && q1.value==='language'){score++;} else notes.push('Q1 should be "Learning a new language" (NOT listed).');
-      if(q2.includes('relocation')||q2.includes('allowance')||q2.includes('accommodation')){score++;} else notes.push('Q2 expected "relocation allowance" or "temporary accommodation" etc.');
-      document.getElementById('b1t1result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
+      let score=0, total=2, notes=[];
+      const q1 = document.querySelector('input[name="b1t1_q1"]:checked');
+      const q2 = normalize(document.getElementById('b1t1_q2').value);
+      if(q1 && q1.value === 'language') score++; else notes.push('Q1 expected NOT listed (learning a new language).');
+      if(q2.includes('allow') || q2.includes('accommodation') || q2.includes('relocation')) score++; else notes.push('Q2 expected relocation allowance or temporary accommodation.');
+      saveResult('resB1T1', score, total, notes);
     }
-    function resetB1T1(){document.querySelectorAll('input[name="b1t1q1"]').forEach(i=>i.checked=false);document.getElementById('b1t1q2').value='';document.getElementById('b1t1result').innerHTML='';}
 
-    // B1 Test 2
     function gradeB1T2(){
-      const q1 = document.querySelector('input[name="b1t2q1"]:checked');
-      const q2 = normalize(document.getElementById('b1t2q2').value);
-      let score=0,total=2,notes=[];
-      if(q1 && q1.value==='equipment'){score++;} else notes.push('Q1 should be protective equipment and training.');
-      if(q2.includes('aware')||q2.includes('risks')||q2.includes('improve')){score++;} else notes.push('Q2 expected "to stay aware of risks and improve procedures".');
-      document.getElementById('b1t2result').innerHTML=`Score: ${score}/${total}. ${notes.join(' ')}`;
-    }
-    function resetB1T2(){document.querySelectorAll('input[name="b1t2q1"]').forEach(i=>i.checked=false);document.getElementById('b1t2q2').value='';document.getElementById('b1t2result').innerHTML='';}
-
-    // Writing checks
-    function wordsCount(s){
-      if(!s) return 0;
-      return s.trim().split(/\s+/).filter(Boolean).length;
+      let score=0, total=2, notes=[];
+      const q1 = document.querySelector('input[name="b1t2_q1"]:checked');
+      const q2 = normalize(document.getElementById('b1t2_q2').value);
+      if(q1 && q1.value === 'equipment') score++; else notes.push('Q1 expected protective equipment and training.');
+      if(q2.includes('aware') || q2.includes('risk') || q2.includes('improve')) score++; else notes.push('Q2 expected to stay aware of risks and improve procedures.');
+      saveResult('resB1T2', score, total, notes);
     }
 
-    function checkEssay(){
-      const text = document.getElementById('essayText').value;
+    /* ========== Writing grading ========== */
+    function gradeEssay(){
+      const text = document.getElementById('essayText').value || '';
       const wc = wordsCount(text);
-      let notes = [];
-      if(wc < 150) notes.push('Word count low: under 150 — recommended 200–300.');
-      if(wc > 350) notes.push('Word count high: over 350.');
-      // basic checks: presence of past tense verbs (simple heuristic)
-      const pastHints = /\b(ed|was|were|did|have|had)\b/i;
-      if(!pastHints.test(text)) notes.push('Few past-tense markers detected — essay should describe past actions.');
-      // cohesion hint
-      const linkWords = /\b(because|therefore|however|also|in addition|finally|first|second)\b/i;
-      if(!linkWords.test(text)) notes.push('Consider adding linking words (because, therefore, however) to improve cohesion.');
-      const result = `Word count: ${wc}. ${notes.join(' ')}`;
-      document.getElementById('essayResult').innerText = result;
+      let score=0, total=20, notes=[];
+      if(wc >= 150) score += 6; else notes.push('Essay length < 150 words (recommended).');
+      if(/[.!?]/.test(text) && text.split(/[.!?]+/).filter(Boolean).length >= 3) score += 7; else notes.push('Use more sentences/paragraphs.');
+      if(/\b(process|improv|result|problem|safety|work)\b/i.test(text)) score += 7; else notes.push('Include work-specific vocabulary & details.');
+      if(score > total) score = total;
+      // persist essay text separately for export
+      persist(document.getElementById('candidateName').value.trim() || '(No name)', 'essay_text', { text: text, words: wc, timestamp: new Date().toISOString() });
+      saveResult('resEssay', score, total, notes);
     }
-    function clearEssay(){document.getElementById('essayText').value='';document.getElementById('essayResult').innerText='';}
 
-    function checkEmail(){
-      const text = document.getElementById('emailText').value;
+    function gradeEmail(){
+      const text = document.getElementById('emailText').value || '';
       const wc = wordsCount(text);
-      let notes=[];
-      if(wc < 50) notes.push('Email is short: under 50 words — may be too brief.');
-      if(wc > 220) notes.push('Email longer than recommended (over 220 words).');
-      // tone heuristic: check for greetings and polite language
-      const greeting = /\b(dear|hello|hi)\b/i;
-      const polite = /\b(please|thank you|kind regards|sincerely|regards)\b/i;
-      if(!greeting.test(text)) notes.push('Consider adding a formal greeting (Dear ...).');
-      if(!polite.test(text)) notes.push('Consider including polite closing (Thank you, Kind regards).');
-      if(!/\b(available|alternative|prefer|can|could)\b/i.test(text)) notes.push('Include clear alternative dates/times and ask about availability.');
-      const result = `Word count: ${wc}. ${notes.join(' ')}`;
-      document.getElementById('emailResult').innerText = result;
+      let score=0, total=20, notes=[];
+      if(wc >= 80) score += 5; else notes.push('Email length < 80 words (recommended).');
+      if(/\b(dear|hello|hi)\b/i.test(text)) score += 5; else notes.push('Add a formal greeting (Dear ...).');
+      if(/\b(please|thank|regards|sincerely)\b/i.test(text)) score += 5; else notes.push('Include polite language / closing.');
+      if(/\b(date|time|alternative|available|can)\b/i.test(text)) score += 5; else notes.push('Provide clear alternative dates/times.');
+      if(score > total) score = total;
+      persist(document.getElementById('candidateName').value.trim() || '(No name)', 'email_text', { text: text, words: wc, timestamp: new Date().toISOString() });
+      saveResult('resEmail', score, total, notes);
     }
-    function clearEmail(){document.getElementById('emailText').value='';document.getElementById('emailResult').innerText='';}
 
+    /* ========== Examiner controls & export ========== */
+    function enableExaminerMode(){
+      const admin = document.getElementById('adminControls');
+      admin.classList.remove('hidden');
+      alert('Examiner mode enabled. Clear and Export buttons are now visible at the bottom.');
+    }
+
+    function clearCandidateData(){
+      const name = document.getElementById('candidateName').value.trim();
+      if(!name){ alert('Please enter the candidate name first.'); return; }
+      if(confirm(`Clear all saved data for "${name}"? This will remove data from this browser.`)){
+        localStorage.removeItem('skilledtest_' + name);
+        alert('Data cleared for ' + name + '.');
+        // clear visible result areas
+        const ids = ['resA1T1','resA1T2','resA2T1','resA2T2','resB1T1','resB1T2','resEssay','resEmail','overallSummary'];
+        ids.forEach(id => { const el=document.getElementById(id); if(el) el.innerHTML=''; });
+      }
+    }
+
+    function gatherAllForExport(name){
+      const stored = loadStored(name);
+      const items = [];
+
+      // reading answers (from DOM)
+      items.push({ title:'A1 Test 1', answers:{
+        q1: (document.querySelector('input[name="a1t1_q1"]:checked')||{}).value || '',
+        q2: (document.querySelector('input[name="a1t1_q2"]:checked')||{}).value || '',
+        q3: document.getElementById('a1t1_q3').value || ''
+      }, score: stored['resA1T1'] || null });
+
+      items.push({ title:'A1 Test 2', answers:{
+        q1: (document.querySelector('input[name="a1t2_q1"]:checked')||{}).value || '',
+        q2: document.getElementById('a1t2_q2').value || ''
+      }, score: stored['resA1T2'] || null });
+
+      items.push({ title:'A2 Test 1', answers:{
+        q1: (document.querySelector('input[name="a2t1_q1"]:checked')||{}).value || '',
+        q2: document.getElementById('a2t1_q2').value || ''
+      }, score: stored['resA2T1'] || null });
+
+      items.push({ title:'A2 Test 2', answers:{
+        q1: (document.querySelector('input[name="a2t2_q1"]:checked')||{}).value || '',
+        q2: document.getElementById('a2t2_q2').value || ''
+      }, score: stored['resA2T2'] || null });
+
+      items.push({ title:'B1 Test 1', answers:{
+        q1: (document.querySelector('input[name="b1t1_q1"]:checked')||{}).value || '',
+        q2: document.getElementById('b1t1_q2').value || ''
+      }, score: stored['resB1T1'] || null });
+
+      items.push({ title:'B1 Test 2', answers:{
+        q1: (document.querySelector('input[name="b1t2_q1"]:checked')||{}).value || '',
+        q2: document.getElementById('b1t2_q2').value || ''
+      }, score: stored['resB1T2'] || null });
+
+      // essay & email (prefer persisted stored text)
+      const essayData = stored['essay_text'] || { text: document.getElementById('essayText').value || '', words: wordsCount(document.getElementById('essayText').value || '') };
+      items.push({ title:'Essay', answers:{ words: essayData.words, text: essayData.text }, score: stored['resEssay'] || null });
+
+      const emailData = stored['email_text'] || { text: document.getElementById('emailText').value || '', words: wordsCount(document.getElementById('emailText').value || '') };
+      items.push({ title:'Email', answers:{ words: emailData.words, text: emailData.text }, score: stored['resEmail'] || null });
+
+      // overall summary if available
+      items.push({ title:'Overall (Local)', answers: stored['overallSummary'] || null, score: stored['overallSummary'] || null });
+
+      return { name, timestamp: new Date().toISOString(), items };
+    }
+
+    function confirmAndExport(){
+      const name = document.getElementById('candidateName').value.trim();
+      if(!name){ alert('Please enter your full name in the Candidate Name field before exporting.'); return; }
+      const ok = confirm(`Please double-check that your full name is written as:\n\n"${name}"\n\nThis name will appear on your results and used in the suggested PDF filename.\n\nDo you want to continue and export your results?`);
+      if(!ok) return;
+      // proceed to build printable window with auto-title
+      const data = gatherAllForExport(name);
+      const filename = `SkilledJobs_EnglishResults_${name.replace(/[^a-z0-9_\\- ]/ig,'').replace(/\\s+/g,'_')}.pdf`;
+      // Build clean printable HTML (simple)
+      let html = `<div style="font-family:system-ui,Segoe UI,Roboto,Arial;max-width:780px;margin:20px auto;color:#0f172a;">`;
+      html += `<h1>Skilled-Jobs English — Results</h1>`;
+      html += `<p><strong>Candidate:</strong> ${data.name}<br><strong>Submitted:</strong> ${data.timestamp}</p>`;
+      data.items.forEach(it => {
+        html += `<hr><h3 style="margin-bottom:6px">${it.title}</h3>`;
+        if(it.answers && typeof it.answers === 'object'){
+          html += `<div style="font-size:0.95rem;white-space:pre-wrap;">`;
+          for(const k in it.answers){
+            html += `<strong>${k}:</strong> ${String(it.answers[k])}\n`;
+          }
+          html += `</div>`;
+        } else {
+          html += `<p>${JSON.stringify(it.answers)}</p>`;
+        }
+        if(it.score){
+          html += `<p style="font-size:0.95rem"><strong>Score:</strong> ${it.score.score} / ${it.score.total}<br><strong>Notes:</strong> ${Array.isArray(it.score.notes)?it.score.notes.join(' '):''}</p>`;
+        }
+      });
+      html += `<hr><p><em>Send this PDF to: susan.centino@cirrusrecruitment.com (or via Messenger if you do not have email).</em></p>`;
+      html += `</div>`;
+
+      // Open a new window and set its title (so Save as PDF suggests the filename)
+      const win = window.open('', '_blank');
+      if(!win){ alert('Popup blocked: please allow popups for this site to export results.'); return; }
+      win.document.write(`<html><head><title>${filename}</title><meta charset="utf-8"></head><body>${html}</body></html>`);
+      win.document.close();
+      // give browser a moment to render then trigger print
+      setTimeout(() => {
+        try {
+          win.focus();
+          win.print();
+        } catch(e) {
+          // fallback: user can manually Save as PDF
+        }
+      }, 250);
+
+      // Show thank-you message in main window after export prompt
+      const post = document.getElementById('postExportMsg');
+      post.classList.remove('hidden');
+      post.innerHTML = `<strong>✅ Thank you for participating in the English Assessment.</strong><br>
+                        Our team will get in touch with you for the next process, so please keep your lines open.`;
+    }
+
+    /* Unlock examiner mode: Ctrl + Alt + E */
+    document.addEventListener('keydown', function(e){
+      if(e.ctrlKey && e.altKey && (e.key === 'E' || e.key === 'e')){
+        enableExaminerMode();
+      }
+    });
+
+    /* Wire up buttons when DOM is ready */
+    document.addEventListener('DOMContentLoaded', function(){
+      // reading
+      document.getElementById('btnA1T1').addEventListener('click', gradeA1T1);
+      document.getElementById('btnA1T2').addEventListener('click', gradeA1T2);
+      document.getElementById('btnA2T1').addEventListener('click', gradeA2T1);
+      document.getElementById('btnA2T2').addEventListener('click', gradeA2T2);
+      document.getElementById('btnB1T1').addEventListener('click', gradeB1T1);
+      document.getElementById('btnB1T2').addEventListener('click', gradeB1T2);
+
+      // writing
+      document.getElementById('btnEssay').addEventListener('click', gradeEssay);
+      document.getElementById('btnEmail').addEventListener('click', gradeEmail);
+
+      // admin
+      document.getElementById('btnClearData').addEventListener('click', clearCandidateData);
+      document.getElementById('btnExportPDF').addEventListener('click', confirmAndExport);
+
+      // update summary when name field blurred
+      document.getElementById('candidateName').addEventListener('blur', function(){
+        const n = this.value.trim() || '(No name)';
+        updateOverallSummary(n);
+      });
+    });
   </script>
 </body>
 </html>
