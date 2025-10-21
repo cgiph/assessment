@@ -306,7 +306,6 @@
       if(/[.!?]/.test(text) && text.split(/[.!?]+/).filter(Boolean).length >= 3) score += 7; else notes.push('Use more sentences/paragraphs.');
       if(/\b(process|improv|result|problem|safety|work)\b/i.test(text)) score += 7; else notes.push('Include work-specific vocabulary & details.');
       if(score > total) score = total;
-      // persist essay text separately for export
       persist(document.getElementById('candidateName').value.trim() || '(No name)', 'essay_text', { text: text, words: wc, timestamp: new Date().toISOString() });
       saveResult('resEssay', score, total, notes);
     }
@@ -337,7 +336,6 @@
       if(confirm(`Clear all saved data for "${name}"? This will remove data from this browser.`)){
         localStorage.removeItem('skilledtest_' + name);
         alert('Data cleared for ' + name + '.');
-        // clear visible result areas
         const ids = ['resA1T1','resA1T2','resA2T1','resA2T2','resB1T1','resB1T2','resEssay','resEmail','overallSummary'];
         ids.forEach(id => { const el=document.getElementById(id); if(el) el.innerHTML=''; });
       }
@@ -347,7 +345,6 @@
       const stored = loadStored(name);
       const items = [];
 
-      // reading answers (from DOM)
       items.push({ title:'A1 Test 1', answers:{
         q1: (document.querySelector('input[name="a1t1_q1"]:checked')||{}).value || '',
         q2: (document.querySelector('input[name="a1t1_q2"]:checked')||{}).value || '',
@@ -379,14 +376,12 @@
         q2: document.getElementById('b1t2_q2').value || ''
       }, score: stored['resB1T2'] || null });
 
-      // essay & email (prefer persisted stored text)
       const essayData = stored['essay_text'] || { text: document.getElementById('essayText').value || '', words: wordsCount(document.getElementById('essayText').value || '') };
       items.push({ title:'Essay', answers:{ words: essayData.words, text: essayData.text }, score: stored['resEssay'] || null });
 
       const emailData = stored['email_text'] || { text: document.getElementById('emailText').value || '', words: wordsCount(document.getElementById('emailText').value || '') };
       items.push({ title:'Email', answers:{ words: emailData.words, text: emailData.text }, score: stored['resEmail'] || null });
 
-      // overall summary if available
       items.push({ title:'Overall (Local)', answers: stored['overallSummary'] || null, score: stored['overallSummary'] || null });
 
       return { name, timestamp: new Date().toISOString(), items };
@@ -397,14 +392,12 @@
       if(!name){ alert('Please enter your full name in the Candidate Name field before exporting.'); return; }
       const ok = confirm(`Please double-check that your full name is written as:\n\n"${name}"\n\nThis name will appear on your results and used in the suggested PDF filename.\n\nDo you want to continue and export your results?`);
       if(!ok) return;
-      // proceed to build printable window with auto-title
       const data = gatherAllForExport(name);
 
-      // sanitize name for file (use single backslash usage in regex)
+      // sanitize name for file
       const safeName = name.replace(/[^a-z0-9_\- ]/ig,'').replace(/\s+/g,'_');
       const filename = `SkilledJobs_EnglishResults_${safeName}.pdf`;
 
-      // Build clean printable HTML (simple)
       let html = `<div style="font-family:system-ui,Segoe UI,Roboto,Arial;max-width:780px;margin:20px auto;color:#0f172a;">`;
       html += `<h1>Skilled-Jobs English — Results</h1>`;
       html += `<p><strong>Candidate:</strong> ${data.name}<br><strong>Submitted:</strong> ${data.timestamp}</p>`;
@@ -426,23 +419,15 @@
       html += `<hr><p><em>Send this PDF to: susan.centino@cirrusrecruitment.com (or via Messenger if you do not have email).</em></p>`;
       html += `</div>`;
 
-      // Open a new window and set its title (so Save as PDF suggests the filename)
       const win = window.open('', '_blank');
       if(!win){ alert('Popup blocked: please allow popups for this site to export results.'); return; }
       win.document.write(`<html><head><title>${filename}</title><meta charset="utf-8"></head><body>${html}</body></html>`);
       win.document.close();
 
-      // Slight delay to ensure title is set in some browsers, then trigger print
       setTimeout(() => {
-        try {
-          win.focus();
-          win.print();
-        } catch(e) {
-          // fallback: user can manually Save as PDF
-        }
+        try { win.focus(); win.print(); } catch(e) {}
       }, 300);
 
-      // Show thank-you message in main window after export prompt
       const post = document.getElementById('postExportMsg');
       post.classList.remove('hidden');
       post.innerHTML = `<strong>✅ Thank you for participating in the English Assessment.</strong><br>
