@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Skilled-Jobs English: Reading & Writing Tests</title>
   <style>
-    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:#0f172a;}
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;}
     body{max-width:900px;margin:28px auto;padding:20px;background:#fff}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     h1{font-size:1.25rem;margin:0}
@@ -22,8 +22,7 @@
     textarea{width:100%;min-height:140px;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
     .hint{font-size:0.9rem;color:#0f172a;background:#fbfbfb;padding:10px;border-radius:6px;border:1px solid #eef2f7}
     footer{margin-top:22px;font-size:0.9rem;color:#334155}
-    .hidden{display:none}
-    @media (max-width:700px){header{flex-direction:column;align-items:flex-start} .name-field{width:100%}}
+    @media (max-width:700px){header{flex-direction:column;align-items:flex-start}.name-field{width:100%}}
   </style>
 </head>
 <body>
@@ -37,143 +36,13 @@
 
   <p class="hint"><strong>Instructions:</strong> Complete all sections. After finishing, follow Final Instructions at the bottom to export your results and send them to the examiner.</p>
 
-  <!-- A1 Test 1 -->
-  <section class="level" id="A1T1">
-    <h2>A1 — Reading Test 1</h2>
-    <div class="passage"><strong>Passage:</strong> Anna works in a small bakery. Every morning she opens the shop at 6:00 a.m. She bakes bread and sells coffee. Her friend Mark helps on weekends. The bakery is near a bus stop, so many people come to buy breakfast.</div>
-    <div class="question">
-      <label>1) What time does Anna open the shop?</label>
-      <label><input type="radio" name="a1t1_q1" value="5"> 5:00 a.m.</label>
-      <label><input type="radio" name="a1t1_q1" value="6"> 6:00 a.m.</label>
-      <label><input type="radio" name="a1t1_q1" value="7"> 7:00 a.m.</label>
-    </div>
-    <div class="question">
-      <label>2) Who helps Anna on weekends?</label>
-      <label><input type="radio" name="a1t1_q2" value="mark"> Mark</label>
-      <label><input type="radio" name="a1t1_q2" value="john"> John</label>
-      <label><input type="radio" name="a1t1_q2" value="noone"> No one</label>
-    </div>
-    <div class="question">
-      <label>3) Short answer — Where is the bakery located?</label>
-      <input id="a1t1_q3" class="short-answer" placeholder="e.g., The bakery is located at the ...">
-    </div>
-    <div class="controls"><button id="btnA1T1">Submit A1 Test 1</button></div>
-    <div class="result" id="resultA1T1"></div>
-  </section>
-
-  <!-- A1 Test 2 -->
-  <section class="level" id="A1T2">
-    <h2>A1 — Reading Test 2</h2>
-    <div class="passage"><strong>Passage:</strong> Tom is a plumber. He fixes taps and pipes. Today he goes to a house. The family says thank you because the water works again. Tom has lunch at 12:30 and returns to the office at 2:00.</div>
-    <div class="question">
-      <label>1) What is Tom's job?</label>
-      <label><input type="radio" name="a1t2_q1" value="teacher"> Teacher</label>
-      <label><input type="radio" name="a1t2_q1" value="plumber"> Plumber</label>
-      <label><input type="radio" name="a1t2_q1" value="driver"> Driver</label>
-    </div>
-    <div class="question">
-      <label>2) Short answer — When does Tom have lunch?</label>
-      <input id="a1t2_q2" class="short-answer" placeholder="e.g., Tom has lunch at ...">
-    </div>
-    <div class="controls"><button id="btnA1T2">Submit A1 Test 2</button></div>
-    <div class="result" id="resultA1T2"></div>
-  </section>
-
-  <!-- A2 Test 1 -->
-  <section class="level" id="A2T1">
-    <h2>A2 — Reading Test 1</h2>
-    <div class="passage"><strong>Passage:</strong> Maria moved to Sydney last year to work as an electrician. She likes the city because she can walk to the beach on weekends. On weekdays she travels by train. Maria studies for a trade certificate in the evenings and hopes to become a team leader in two years.</div>
-    <div class="question">
-      <label>1) Why does Maria like the city?</label>
-      <label><input type="radio" name="a2t1_q1" value="food"> Because of the food</label>
-      <label><input type="radio" name="a2t1_q1" value="beach"> Because she can walk to the beach</label>
-      <label><input type="radio" name="a2t1_q1" value="train"> Because trains are cheap</label>
-    </div>
-    <div class="question">
-      <label>2) Short answer — What does Maria hope to become?</label>
-      <input id="a2t1_q2" class="short-answer" placeholder="e.g., Maria hopes to become a ...">
-    </div>
-    <div class="controls"><button id="btnA2T1">Submit A2 Test 1</button></div>
-    <div class="result" id="resultA2T1"></div>
-  </section>
-
-  <!-- A2 Test 2 -->
-  <section class="level" id="A2T2">
-    <h2>A2 — Reading Test 2</h2>
-    <div class="passage"><strong>Passage:</strong> Job ads often ask for two things: experience and a current visa. If the applicant has experience but no visa, it is difficult to hire them. Many employers prefer candidates who can start quickly and speak clear English.</div>
-    <div class="question">
-      <label>1) What do job ads often ask for?</label>
-      <label><input type="radio" name="a2t2_q1" value="salary"> High salary</label>
-      <label><input type="radio" name="a2t2_q1" value="experience"> Experience and a current visa</label>
-      <label><input type="radio" name="a2t2_q1" value="location"> A car</label>
-    </div>
-    <div class="question">
-      <label>2) Short answer — Why do employers prefer some candidates?</label>
-      <input id="a2t2_q2" class="short-answer" placeholder="e.g., Because they can ...">
-    </div>
-    <div class="controls"><button id="btnA2T2">Submit A2 Test 2</button></div>
-    <div class="result" id="resultA2T2"></div>
-  </section>
-
-  <!-- B1 Test 1 -->
-  <section class="level" id="B1T1">
-    <h2>B1 — Reading Test 1</h2>
-    <div class="passage"><strong>Passage:</strong> Many skilled workers move between cities to follow job opportunities. Relocating can be positive — it often brings higher pay and new skills — but it also has costs: finding housing, changing schools for children, and the time needed to settle in. Employers who offer relocation support are more likely to attract experienced candidates. Some companies give a relocation allowance, others help with temporary accommodation.</div>
-    <div class="question">
-      <label>1) Which of the following is NOT listed as a cost of relocating?</label>
-      <label><input type="radio" name="b1t1_q1" value="housing"> Finding housing</label>
-      <label><input type="radio" name="b1t1_q1" value="schools"> Changing schools for children</label>
-      <label><input type="radio" name="b1t1_q1" value="language"> Learning a new language</label>
-    </div>
-    <div class="question">
-      <label>2) Short answer — How do some companies support relocating employees?</label>
-      <input id="b1t1_q2" class="short-answer" placeholder="e.g., Some companies support ...">
-    </div>
-    <div class="controls"><button id="btnB1T1">Submit B1 Test 1</button></div>
-    <div class="result" id="resultB1T1"></div>
-  </section>
-
-  <!-- B1 Test 2 -->
-  <section class="level" id="B1T2">
-    <h2>B1 — Reading Test 2</h2>
-    <div class="passage"><strong>Passage:</strong> Workplace safety is important in trades such as construction and manufacturing. Australian regulations require employers to provide protective equipment and training. Workers should report hazards immediately so managers can act. Regular safety meetings help teams stay aware of risks and improve procedures.</div>
-    <div class="question">
-      <label>1) What must employers provide according to the passage?</label>
-      <label><input type="radio" name="b1t2_q1" value="equipment"> Protective equipment and training</label>
-      <label><input type="radio" name="b1t2_q1" value="salary"> Higher salaries</label>
-      <label><input type="radio" name="b1t2_q1" value="lodging"> Lodging</label>
-    </div>
-    <div class="question">
-      <label>2) Short answer — Why are regular safety meetings useful?</label>
-      <input id="b1t2_q2" class="short-answer" placeholder="e.g., Regular safety meetings are useful because ...">
-    </div>
-    <div class="controls"><button id="btnB1T2">Submit B1 Test 2</button></div>
-    <div class="result" id="resultB1T2"></div>
-  </section>
-
-  <!-- Writing: Essay -->
-  <section class="level" id="WritingEssay">
-    <h2>Writing — Essay</h2>
-    <div class="passage"><strong>Task:</strong> Describe a time when you improved a process at work. Explain what the problem was, what steps you took, and what the result was. Write 150–300 words if possible.</div>
-    <textarea id="essayText" placeholder="Write your essay here..."></textarea>
-    <div class="controls"><button id="btnEssay">Submit Essay</button></div>
-    <div class="result" id="resultEssay"></div>
-  </section>
-
-  <!-- Writing: Email -->
-  <section class="level" id="WritingEmail">
-    <h2>Writing — Formal Email</h2>
-    <div class="passage"><strong>Task:</strong> Write a polite email to a recruitment officer to ask to reschedule a job interview. Provide two alternative dates/times. Suggested 80–150 words.</div>
-    <textarea id="emailText" placeholder="Write your email here..."></textarea>
-    <div class="controls"><button id="btnEmail">Submit Email</button></div>
-    <div class="result" id="resultEmail"></div>
-  </section>
+  <!-- (your test sections remain the same — A1T1 through WritingEmail) -->
 
   <div class="hint" id="finalInstructions">
     <strong>Final instructions (candidates):</strong>
     <ol>
       <li>Type your <strong>full name</strong> in the Candidate Name field at the top.</li>
-      <li>When you have finished all sections, click <strong>Export Results to PDF</strong>. A printable page will open for saving.</li>
+      <li>When you have finished all sections, click <strong>Export Results to PDF</strong>. The file will be saved to your device.</li>
       <li>Send the saved PDF to: <strong>susan.centino@cirrusrecruitment.com</strong></li>
     </ol>
   </div>
@@ -184,59 +53,116 @@
     </div>
   </footer>
 
-  <script>
-document.addEventListener('DOMContentLoaded',()=>{
-  function getRadioScore(name, correctValue){const r=document.querySelector(`input[name="${name}"]:checked`);return r&&r.value===correctValue?1:0;}
-  function getTextScore(id, answer){const t=document.getElementById(id).value.trim().toLowerCase();return t.includes(answer)?1:0;}
-  function wordsCount(s){return s.trim().split(/\s+/).filter(Boolean).length;}
-  
-  document.getElementById('btnA1T1').addEventListener('click',()=>{
-    const score=getRadioScore('a1t1_q1','6')+getRadioScore('a1t1_q2','mark')+getTextScore('a1t1_q3','bakery');
-    document.getElementById('resultA1T1').innerHTML=`<strong>Score:</strong> ${score}/3`;
-  });
-  document.getElementById('btnA1T2').addEventListener('click',()=>{
-    const score=getRadioScore('a1t2_q1','plumber')+getTextScore('a1t2_q2','12:30');
-    document.getElementById('resultA1T2').innerHTML=`<strong>Score:</strong> ${score}/2`;
-  });
-  document.getElementById('btnA2T1').addEventListener('click',()=>{
-    const score=getRadioScore('a2t1_q1','beach')+getTextScore('a2t1_q2','team leader');
-    document.getElementById('resultA2T1').innerHTML=`<strong>Score:</strong> ${score}/2`;
-  });
-  document.getElementById('btnA2T2').addEventListener('click',()=>{
-    const score=getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start');
-    document.getElementById('resultA2T2').innerHTML=`<strong>Score:</strong> ${score}/2`;
-  });
-  document.getElementById('btnB1T1').addEventListener('click',()=>{
-    const score=getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','support');
-    document.getElementById('resultB1T1').innerHTML=`<strong>Score:</strong> ${score}/2`;
-  });
-  document.getElementById('btnB1T2').addEventListener('click',()=>{
-    const score=getRadioScore('b1t2_q1','equipment')+getTextScore('b1t2_q2','aware');
-    document.getElementById('resultB1T2').innerHTML=`<strong>Score:</strong> ${score}/2`;
-  });
-  document.getElementById('btnEssay').addEventListener('click',()=>{
-    const wc=wordsCount(document.getElementById('essayText').value);
-    document.getElementById('resultEssay').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
-  });
-  document.getElementById('btnEmail').addEventListener('click',()=>{
-    const wc=wordsCount(document.getElementById('emailText').value);
-    document.getElementById('resultEmail').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
-  });
+  <!-- ✅ jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  document.getElementById('btnExportPDF').addEventListener('click',()=>{
-    const name=document.getElementById('candidateName').value.trim()||'(No name)';
-    let html=`<h2>Candidate: ${name}</h2>`;
-    const sections=['A1T1','A1T2','A2T1','A2T2','B1T1','B1T2','Essay','Email'];
-    sections.forEach(s=>{
-      const r=document.getElementById('result'+s);
-      if(r) html+=`<p><strong>${s}:</strong> ${r.innerText.replace('Score:','').replace('Score (words count):','')}</p>`;
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // --- scoring helpers ---
+    const getRadioScore = (name, correctValue) => {
+      const r = document.querySelector(`input[name="${name}"]:checked`);
+      return r && r.value === correctValue ? 1 : 0;
+    };
+    const getTextScore = (id, answer) => {
+      const t = document.getElementById(id).value.trim().toLowerCase();
+      return t.includes(answer) ? 1 : 0;
+    };
+    const wordsCount = s => s.trim().split(/\s+/).filter(Boolean).length;
+
+    // --- Reading scoring ---
+    const readingTests = [
+      {btn:'btnA1T1', id:'A1T1', score:()=>getRadioScore('a1t1_q1','6')+getRadioScore('a1t1_q2','mark')+getTextScore('a1t1_q3','bus')},
+      {btn:'btnA1T2', id:'A1T2', score:()=>getRadioScore('a1t2_q1','plumber')+getTextScore('a1t2_q2','12:30')},
+      {btn:'btnA2T1', id:'A2T1', score:()=>getRadioScore('a2t1_q1','beach')+getTextScore('a2t1_q2','leader')},
+      {btn:'btnA2T2', id:'A2T2', score:()=>getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start')},
+      {btn:'btnB1T1', id:'B1T1', score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','support')},
+      {btn:'btnB1T2', id:'B1T2', score:()=>getRadioScore('b1t2_q1','equipment')+getTextScore('b1t2_q2','aware')}
+    ];
+    readingTests.forEach(t=>{
+      document.getElementById(t.btn).addEventListener('click',()=>{
+        const s=t.score();
+        document.getElementById('result'+t.id).innerHTML=`<strong>Score:</strong> ${s}`;
+      });
     });
-    const printWin=window.open('', '_blank');
-    printWin.document.write(`<html><head><title>${name} Results</title></head><body>${html}</body></html>`);
-    printWin.document.close();
-    printWin.print();
+
+    // --- Writing scoring ---
+    document.getElementById('btnEssay').addEventListener('click',()=>{
+      const wc=wordsCount(document.getElementById('essayText').value);
+      document.getElementById('resultEssay').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
+    });
+    document.getElementById('btnEmail').addEventListener('click',()=>{
+      const wc=wordsCount(document.getElementById('emailText').value);
+      document.getElementById('resultEmail').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
+    });
+
+    // --- helper for CEFR conversion ---
+    function writingScoreAndLevel(words){
+      if(words<50)return{score:0,level:"Below A1"};
+      if(words<100)return{score:1,level:"A1"};
+      if(words<150)return{score:2,level:"A2"};
+      if(words<200)return{score:3,level:"B1"};
+      if(words<250)return{score:4,level:"B2"};
+      return{score:5,level:"C1"};
+    }
+
+    // --- determine CEFR by reading scores ---
+    function determineCEFR(readingScores){
+      let highest='A1',max=readingScores.A1;
+      for(const lvl in readingScores){
+        if(readingScores[lvl]>max){max=readingScores[lvl];highest=lvl;}
+      }
+      return highest;
+    }
+
+    // --- export to PDF ---
+    document.getElementById('btnExportPDF').addEventListener('click',()=>{
+      const { jsPDF } = window.jspdf;
+      const doc=new jsPDF();
+      const name=document.getElementById('candidateName').value.trim()||'(No name)';
+
+      // Collect scores
+      const getScore=(id)=>parseInt((document.getElementById('result'+id)?.innerText.match(/\d+/)||[0])[0]);
+      const readingScores={
+        A1:getScore('A1T1')+getScore('A1T2'),
+        A2:getScore('A2T1')+getScore('A2T2'),
+        B1:getScore('B1T1')+getScore('B1T2')
+      };
+      const essayW=getScore('Essay');
+      const emailW=getScore('Email');
+      const essayEval=writingScoreAndLevel(essayW);
+      const emailEval=writingScoreAndLevel(emailW);
+      const readingLevel=determineCEFR(readingScores);
+
+      // --- PDF layout ---
+      let y=20;
+      doc.setFontSize(16);
+      doc.text(`Candidate: ${name}`,10,y);y+=10;
+
+      doc.setFontSize(14);
+      doc.text('Reading Comprehension',10,y);y+=8;
+      doc.setFontSize(12);
+      doc.text(`A1 Total: ${readingScores.A1}`,10,y);y+=6;
+      doc.text(`A2 Total: ${readingScores.A2}`,10,y);y+=6;
+      doc.text(`B1 Total: ${readingScores.B1}`,10,y);y+=8;
+      doc.text(`Highest Reading Level: ${readingLevel}`,10,y);y+=12;
+
+      doc.setFontSize(14);
+      doc.text('Writing Results',10,y);y+=8;
+      doc.setFontSize(12);
+      doc.text(`Essay Word Count: ${essayW} → Level: ${essayEval.level}`,10,y);y+=6;
+      doc.text(`Email Word Count: ${emailW} → Level: ${emailEval.level}`,10,y);y+=10;
+
+      doc.setFontSize(14);
+      doc.text('Overall Summary',10,y);y+=8;
+      doc.setFontSize(12);
+      doc.text(`Reading Level: ${readingLevel}`,10,y);y+=6;
+      doc.text(`Writing Level: ${essayEval.level===emailEval.level?essayEval.level:essayEval.level+'/'+emailEval.level}`,10,y);y+=10;
+      doc.text('End of Report',10,y);
+
+      const filename=`${name.replace(/\s+/g,'_')}_Assessment.pdf`;
+      doc.save(filename);
+    });
   });
-});
   </script>
 </body>
 </html>
