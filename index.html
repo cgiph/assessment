@@ -177,18 +177,21 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
   
 <!-- ======== B1T3 ======== -->
 <section class="level" id="B1T3">
-  <h2>B1 Test 3 – Writing Task</h2>
+  <h2>B1 Test 3 – Reading</h2>
   <div class="passage">
-    You are a team leader. A client complained about a delay in delivery. 
-    Write a short email (2–3 sentences) apologizing and explaining that your team is already fixing the issue.
+    You are a team leader. A client complained about a delay in delivery.
+    You need to respond to the client and explain that your team is already fixing the issue.
   </div>
+
   <div class="question">
-    <p>Write your email below:</p>
-    <textarea id="b1t3_q1" class="long-answer" placeholder="Type your answer here..."></textarea>
+    <p>1. What should the team leader do in the email?</p>
+    <input id="b1t3_q1" class="short-answer" placeholder="Type your answer">
   </div>
+
   <div class="controls"><button id="btnB1T3">Submit</button></div>
   <div id="resultB1T3" class="result"></div>
 </section>
+
   
 <!-- ======== Writing Essay ======== -->
 <section class="level" id="Essay">
@@ -241,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {btn:'btnA2T3',id:'A2T3',score:()=>getRadioScore('a2t3_q1','b')},
     {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','communicate')},
     {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','gloves')},
-    {btn:'btnB1T3',id:'B1T3',score:()=>getTextScore('b1t3_q1','apologize')+getTextScore('b1t3_q1','delay')+getTextScore('b1t3_q1','fix')}
+    {btn:'btnB1T3',id:'B1T3',score:()=>getTextScore('b1t3_q1','apologize')+getTextScore('b1t3_q1','sorry')}
   ];
   readingTests.forEach(t=>{
     document.getElementById(t.btn).addEventListener('click',()=>{
