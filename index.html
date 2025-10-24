@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function determineCEFR(r){
-    let h='A1',m=r.A1;
+    let h='A2',m=r.A2;
     for(const lvl in r){if(r[lvl]>m){m=r[lvl];h=lvl;}}
     return h;
   }
