@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
     {btn:'btnA1T2',id:'A1T2',score:()=>getRadioScore('a1t2_q1','plumber')+getTextScore('a1t2_q2','12:30')},
     {btn:'btnA2T1',id:'A2T1',score:()=>getRadioScore('a2t1_q1','beach')+getTextScore('a2t1_q2','leader')},
     {btn:'btnA2T2',id:'A2T2',score:()=>getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start')},
-    {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','support')},
-    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','equipment')+getTextScore('b1t2_q2','aware')}
+    {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','communicate')},
+    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','wearing')}
   ];
   readingTests.forEach(t=>{
     document.getElementById(t.btn).addEventListener('click',()=>{
