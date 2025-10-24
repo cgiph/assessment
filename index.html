@@ -232,10 +232,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return{score:5,level:'C1'};
   }
 
-  function determineCEFR(r){
-    let h='A2',m=r.A2;
-    for(const lvl in r){if(r[lvl]>m){m=r[lvl];h=lvl;}}
-    return h;
+ function determineCEFR(r){
+  const a1Full = r.A1 >= 4; // passed A1
+  const a2Full = r.A2 >= 4; // passed A2
+  const b1Full = r.B1 >= 4; // passed B1
+
+  if (a1Full && a2Full && b1Full) return 'B1';
+  if (a1Full && a2Full) return 'A2';
+  if (a1Full) return 'A1';
+  return 'Below A1';
+}
+
   }
 
   document.getElementById('btnExportPDF').addEventListener('click',()=>{
