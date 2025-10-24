@@ -145,8 +145,8 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
   </div>
   <div class="question">
     <p>1. What should workers know before using equipment?</p>
-    <label><input type="radio" name="b1t2_q1" value="rules"> The company address</label>
-    <label><input type="radio" name="b1t2_q1" value="equipment"> The safety rules</label>
+    <label><input type="radio" name="b1t2_q1" value="rules"> injuries</label>
+    <label><input type="radio" name="b1t2_q1" value="equipment"> safety rules</label>
   </div>
   <div class="question">
     <p>2. Name one safety item mentioned.</p>
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {btn:'btnA2T1',id:'A2T1',score:()=>getRadioScore('a2t1_q1','beach')+getTextScore('a2t1_q2','leader')},
     {btn:'btnA2T2',id:'A2T2',score:()=>getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start')},
     {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','communicate')},
-    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','wearing')}
+    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','ppe')}
   ];
   readingTests.forEach(t=>{
     document.getElementById(t.btn).addEventListener('click',()=>{
