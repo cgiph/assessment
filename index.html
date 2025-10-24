@@ -224,11 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function writingScoreAndLevel(w){
-    if(w<50)return{score:0,level:'Below A1'};
-    if(w<100)return{score:1,level:'A1'};
-    if(w<150)return{score:2,level:'A2'};
-    if(w<200)return{score:3,level:'B1'};
-    if(w<250)return{score:4,level:'B2'};
+    if(w<20)return{score:0,level:'Below A1'};
+    if(w<50)return{score:1,level:'A1'};
+    if(w<100)return{score:2,level:'A2'};
+    if(w<150)return{score:3,level:'B1'};
+    if(w<200)return{score:4,level:'B2'};
     return{score:5,level:'C1'};
   }
 
