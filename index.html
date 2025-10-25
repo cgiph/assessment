@@ -34,7 +34,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
   </div>
 </header>
 
-<p class="hint"><strong>Instructions:</strong> Complete all sections. After finishing, follow Final Instructions at the bottom to export your results and send them to the examiner.</p>
+<p class="hint"><strong>Instructions:</strong> Open this file on Chrome. Complete all sections. After finishing, follow Final Instructions at the bottom to save your test and send them to the assessor.</p>
 
 <!-- ======== A1T1 ======== -->
 <section class="level" id="A1T1">
@@ -65,7 +65,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="A1T2">
   <h2>A1 Test 2 – Reading</h2>
   <div class="passage">
-    Joe is a plumber. He starts work at 8:00 and finishes at 12:30. He enjoys fixing pipes and helping people with water problems.
+    Joe is a plumber. He starts work at 8:00 and finishes at half past 12. He enjoys fixing pipes and helping people with water problems.
   </div>
   <div class="question">
     <p>1. What is Joe’s job?</p>
@@ -84,7 +84,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="A2T1">
   <h2>A2 Test 1 – Reading</h2>
   <div class="passage">
-    During the summer, our group goes to the beach every weekend. I am the leader and I plan the activities. Everyone helps clean up before leaving.
+    During the summer, our group goes on vacation every weekend at the beach. I lead a group of sales rep, and plan the team-building activity for collaboration and motivation.
   </div>
   <div class="question">
     <p>1. Where does the group go on weekends?</p>
@@ -103,7 +103,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="A2T2">
   <h2>A2 Test 2 – Reading</h2>
   <div class="passage">
-    My first job was at a restaurant. It was not easy because I had no experience. But my manager helped me learn and I became faster at my work.
+    My first job was at a restaurant. It was not an easy start because I had no experience. But my manager helped me to learn the ropes and become efficient at my work.
   </div>
   <div class="question">
     <p>1. What did the writer not have?</p>
@@ -141,7 +141,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="B1T1">
   <h2>B1 Test 1 – Reading</h2>
   <div class="passage">
-    Learning another language can be difficult, but it gives you more opportunities. Many companies look for employees who can communicate in different languages.
+    Learning another language can be difficult, but it gives you more opportunities to communicate effectively, especially in the workplace. That is why many companies look for employees who can communicate in different languages.
   </div>
   <div class="question">
     <p>1. What do many companies look for?</p>
@@ -160,15 +160,15 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="B1T2">
   <h2>B1 Test 2 – Reading</h2>
   <div class="passage">
-    Before using any equipment, workers must be aware of the safety rules. Wearing gloves, goggles, and helmets can prevent serious injuries.
+    Before using any equipment, workers must be aware of the safety rules, like wearing gloves, goggles, and helmets to prevent serious injuries.
   </div>
   <div class="question">
     <p>1. What should workers know before using equipment?</p>
     <label><input type="radio" name="b1t2_q1" value="rules"> injuries</label>
-    <label><input type="radio" name="b1t2_q1" value="safety"> safety</label>
+    <label><input type="radio" name="b1t2_q1" value="safety rules"> safety rules</label>
   </div>
   <div class="question">
-    <p>2. Name one safety item mentioned.</p>
+    <p>2. Name the safety rule mentioned.</p>
     <input id="b1t2_q2" class="short-answer" placeholder="Type your answer">
   </div>
   <div class="controls"><button id="btnB1T2">Submit</button></div>
@@ -179,8 +179,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <section class="level" id="B1T3">
   <h2>B1 Test 3 – Reading</h2>
   <div class="passage">
-    You are a team leader. A client complained about a delay in delivery.
-    You need to respond to the client and explain that your team is already fixing the issue.
+    A client complained about a delay in delivery. As a leader, you need to respond to the client and explain that your team is already fixing the issue.
   </div>
 
   <div class="question">
@@ -205,7 +204,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
 <!-- ======== Writing Email ======== -->
 <section class="level" id="Email">
   <h2>Writing Task 2 – Email</h2>
-  <p>Write an email to your supervisor explaining <strong>why you will be late for work.</strong></p>
+  <p>Your team leader, Josh, emailed you about a mentorship program for the new apprentice, Leonard <strong>Write your email reply.</strong></p>
   <textarea id="emailText" placeholder="Write your email here..."></textarea>
   <div class="controls"><button id="btnEmail">Submit</button></div>
   <div id="resultEmail" class="result"></div>
@@ -217,7 +216,7 @@ footer{margin-top:22px;font-size:0.9rem;color:#334155}
   <ol>
     <li>Type your <strong>full name</strong> in the Candidate Name field at the top.</li>
     <li>When you have finished all sections, click <strong>Export Results to PDF</strong>. The file will be saved to your device.</li>
-    <li>Send the saved PDF to: <strong>susan.centino@cirrusrecruitment.com</strong></li>
+    <li>Send the saved PDF to: <strong>susan.centino@cirrusrecruitment.com or on messenger</strong></li>
   </ol>
 </div>
 
@@ -243,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {btn:'btnA2T2',id:'A2T2',score:()=>getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start')},
     {btn:'btnA2T3',id:'A2T3',score:()=>getRadioScore('a2t3_q1','b')},
     {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','communicate')},
-    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','gloves')},
+    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','wearing')},
     {btn:'btnB1T3',id:'B1T3',score:()=>getTextScore('b1t3_q1','apologize')+getTextScore('b1t3_q1','sorry')}
   ];
   readingTests.forEach(t=>{
