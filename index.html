@@ -1,234 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Skilled-Jobs English: Reading & Writing Tests</title>
-<style>
-:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:#0f172a;}
-body{max-width:900px;margin:28px auto;padding:20px;background:#fff}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-h1{font-size:1.25rem;margin:0}
-.name-field{font-size:0.95rem;border:1px solid #cbd5e1;border-radius:6px;padding:6px;width:260px}
-.level{border:1px solid #dbe7f7;border-radius:8px;padding:14px;margin:18px 0;background:#ffffff}
-h2{font-size:1.05rem;margin:6px 0}
-.passage{background:#fafafa;padding:10px;border-radius:6px;border:1px solid #eef2f7;margin-bottom:10px;font-size:0.95rem}
-.question{margin:8px 0;padding:8px;border-left:3px solid #e6eef8;background:transparent;border-radius:4px}
-label{display:block;cursor:pointer;margin:3px 0}
-.short-answer{width:100%;min-height:44px;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-button{background:#0f172a;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
-.result{margin-top:12px;padding:10px;border-radius:6px;background:#f8fafc;border:1px solid #e6eef8;font-size:0.95rem}
-textarea{width:100%;min-height:140px;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
-.hint{font-size:0.9rem;color:#0f172a;background:#fbfbfb;padding:10px;border-radius:6px;border:1px solid #eef2f7}
-footer{margin-top:22px;font-size:0.9rem;color:#334155}
-@media (max-width:700px){header{flex-direction:column;align-items:flex-start}.name-field{width:100%}}
-</style>
-</head>
-<body>
-<header>
-  <h1>Skilled-Jobs English — Reading & Writing</h1>
-  <div>
-    <label for="candidateName"><strong>Candidate Name:</strong></label><br>
-    <input id="candidateName" class="name-field" type="text" placeholder="Write your full name here">
-  </div>
-</header>
-
-<p class="hint"><strong>Instructions:</strong> Open this file on Chrome. Complete all sections. After finishing, follow Final Instructions at the bottom to save your test and send them to the assessor.</p>
-
-<!-- ======== A1T1 ======== -->
-<section class="level" id="A1T1">
-  <h2>A1 Test 1 – Reading</h2>
-  <div class="passage">
-    Mark takes bus number 6 to go to work every morning. He usually sits near the window and reads the newspaper. The bus stop is close to his house.
-  </div>
-  <div class="question">
-    <p>1. What bus number does Mark take?</p>
-    <label><input type="radio" name="a1t1_q1" value="6"> 6</label>
-    <label><input type="radio" name="a1t1_q1" value="10"> 10</label>
-    <label><input type="radio" name="a1t1_q1" value="5"> 5</label>
-  </div>
-  <div class="question">
-    <p>2. Where does Mark read the newspaper?</p>
-    <label><input type="radio" name="a1t1_q2" value="home"> At home</label>
-    <label><input type="radio" name="a1t1_q2" value="mark"> On the bus</label>
-  </div>
-  <div class="question">
-    <p>3. What kind of transport does he use?</p>
-    <input id="a1t1_q3" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnA1T1">Submit</button></div>
-  <div id="resultA1T1" class="result"></div>
-</section>
-
-<!-- ======== A1T2 ======== -->
-<section class="level" id="A1T2">
-  <h2>A1 Test 2 – Reading</h2>
-  <div class="passage">
-    Joe is a plumber. He starts work at 8:00 and finishes at half past 12. He enjoys fixing pipes and helping people with water problems.
-  </div>
-  <div class="question">
-    <p>1. What is Joe’s job?</p>
-    <label><input type="radio" name="a1t2_q1" value="plumber"> Plumber</label>
-    <label><input type="radio" name="a1t2_q1" value="driver"> Driver</label>
-  </div>
-  <div class="question">
-    <p>2. What time does he finish work?</p>
-    <input id="a1t2_q2" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnA1T2">Submit</button></div>
-  <div id="resultA1T2" class="result"></div>
-</section>
-
-<!-- ======== A2T1 ======== -->
-<section class="level" id="A2T1">
-  <h2>A2 Test 1 – Reading</h2>
-  <div class="passage">
-    During the summer, our group goes on vacation every weekend at the beach. I lead a group of sales rep, and plan the team-building activity for collaboration and motivation.
-  </div>
-  <div class="question">
-    <p>1. Where does the group go on weekends?</p>
-    <label><input type="radio" name="a2t1_q1" value="mountain"> The mountain</label>
-    <label><input type="radio" name="a2t1_q1" value="beach"> The beach</label>
-  </div>
-  <div class="question">
-    <p>2. What is the writer’s role?</p>
-    <input id="a2t1_q2" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnA2T1">Submit</button></div>
-  <div id="resultA2T1" class="result"></div>
-</section>
-
-<!-- ======== A2T2 ======== -->
-<section class="level" id="A2T2">
-  <h2>A2 Test 2 – Reading</h2>
-  <div class="passage">
-    My first job was at a restaurant. It was not an easy start because I had no experience. But my manager helped me to learn the ropes and become efficient at my work.
-  </div>
-  <div class="question">
-    <p>1. What did the writer not have?</p>
-    <label><input type="radio" name="a2t2_q1" value="experience"> Experience</label>
-    <label><input type="radio" name="a2t2_q1" value="money"> Money</label>
-  </div>
-  <div class="question">
-    <p>2. What did the manager help the writer to do?</p>
-    <input id="a2t2_q2" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnA2T2">Submit</button></div>
-  <div id="resultA2T2" class="result"></div>
-</section>
-  
-<!-- ======== A2T3 ======== -->
-<section class="level" id="A2T3">
-  <h2>A2 Test 3 – Workplace Interaction</h2>
-  <div class="passage">
-    You have a co-worker, Alex, who often criticizes your work in front of others. 
-    You feel uncomfortable but want to solve the problem politely. 
-    You decide to talk to Alex after work.
-  </div>
-  <div class="question">
-    <p>1. What is the best way to start your conversation with Alex?</p>
-    <label><input type="radio" name="a2t3_q1" value="a"> "You always embarrass me in front of people!"</label>
-    <label><input type="radio" name="a2t3_q1" value="b"> "Can we talk for a minute? I’d like to understand your feedback better."</label>
-    <label><input type="radio" name="a2t3_q1" value="c"> "I don’t care what you think about my work."</label>
-    <label><input type="radio" name="a2t3_q1" value="d"> "Why do you always have to complain?"</label>
-  </div>
-  <div class="controls"><button id="btnA2T3">Submit</button></div>
-  <div id="resultA2T3" class="result"></div>
-</section>
-
-<!-- ======== B1T1 ======== -->
-<section class="level" id="B1T1">
-  <h2>B1 Test 1 – Reading</h2>
-  <div class="passage">
-    Learning another language can be difficult, but it gives you more opportunities to communicate effectively, especially in the workplace. That is why many companies look for employees who can communicate in different languages.
-  </div>
-  <div class="question">
-    <p>1. What do many companies look for?</p>
-    <label><input type="radio" name="b1t1_q1" value="language"> People who can speak other languages</label>
-    <label><input type="radio" name="b1t1_q1" value="friends"> People with many friends</label>
-  </div>
-  <div class="question">
-    <p>2. What do languages help people to do?</p>
-    <input id="b1t1_q2" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnB1T1">Submit</button></div>
-  <div id="resultB1T1" class="result"></div>
-</section>
-
-<!-- ======== B1T2 ======== -->
-<section class="level" id="B1T2">
-  <h2>B1 Test 2 – Reading</h2>
-  <div class="passage">
-    Before using any equipment, workers must be aware of the safety rules, like wearing gloves, goggles, and helmets to prevent serious injuries.
-  </div>
-  <div class="question">
-    <p>1. What should workers know before using equipment?</p>
-    <label><input type="radio" name="b1t2_q1" value="rules"> injuries</label>
-    <label><input type="radio" name="b1t2_q1" value="safety"> safety rules</label>
-  </div>
-  <div class="question">
-    <p>2. Name the safety rule mentioned.</p>
-    <input id="b1t2_q2" class="short-answer" placeholder="Type your answer">
-  </div>
-  <div class="controls"><button id="btnB1T2">Submit</button></div>
-  <div id="resultB1T2" class="result"></div>
-</section>
-  
-<!-- ======== B1T3 ======== -->
-<section class="level" id="B1T3">
-  <h2>B1 Test 3 – Reading</h2>
-  <div class="passage">
-    A client complained about a delay in delivery. As a leader, you need to respond to the client and explain that your team is already fixing the issue.
-  </div>
-
-  <div class="question">
-    <p>1. What should the team leader do in the email?</p>
-    <input id="b1t3_q1" class="short-answer" placeholder="Type your answer">
-  </div>
-
-  <div class="controls"><button id="btnB1T3">Submit</button></div>
-  <div id="resultB1T3" class="result"></div>
-</section>
-
-  
-<!-- ======== Writing Essay ======== -->
-<section class="level" id="Essay">
-  <h2>Writing Task 1 – Essay</h2>
-  <p>Write about <strong>why learning English is important for your future job.</strong></p>
-  <textarea id="essayText" placeholder="Write your essay here..."></textarea>
-  <div class="controls"><button id="btnEssay">Submit</button></div>
-  <div id="resultEssay" class="result"></div>
-</section>
-
-<!-- ======== Writing Email ======== -->
-<section class="level" id="Email">
-  <h2>Writing Task 2 – Email</h2>
-  <p>Your team leader (Josh), emailed you about a mentorship program for the new apprentice, Leonard. <strong>Write your email reply.</strong></p>
-  <textarea id="emailText" placeholder="Write your email here..."></textarea>
-  <div class="controls"><button id="btnEmail">Submit</button></div>
-  <div id="resultEmail" class="result"></div>
-</section>
-
-<!-- ======== Final Instructions ======== -->
-<div class="hint" id="finalInstructions">
-  <strong>Final instructions (candidates):</strong>
-  <ol>
-    <li>Type your <strong>full name</strong> in the Candidate Name field at the top.</li>
-    <li>When you have finished all sections, click <strong>Export Results to PDF</strong>. The file will be saved to your device.</li>
-    <li>Send the saved PDF to: <strong>susan.centino@cirrusrecruitment.com or on messenger</strong></li>
-  </ol>
-</div>
-
-<footer>
-  <div id="adminControls">
-    <button id="btnExportPDF">Export Results to PDF</button>
-  </div>
-</footer>
-
-<!-- jsPDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const getRadioScore=(name,val)=>{const r=document.querySelector('input[name="'+name+'"]:checked');return r&&r.value===val?1:0;}
@@ -252,60 +21,124 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== Writing Buttons (with examiner scoring) =====
   document.getElementById('btnEssay').addEventListener('click',()=>{
-    const wc=wordCount(document.getElementById('essayText').value);
-    document.getElementById('resultEssay').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
-  });
-  document.getElementById('btnEmail').addEventListener('click',()=>{
-    const wc=wordCount(document.getElementById('emailText').value);
-    document.getElementById('resultEmail').innerHTML=`<strong>Score (words count):</strong> ${wc}`;
+    const wc = wordCount(document.getElementById('essayText').value);
+    document.getElementById('resultEssay').innerHTML = `<strong>Essay Word Count:</strong> ${wc}`;
+    showWritingEvaluation('essay', 'essayText', 'resultEssay');
   });
 
-  function writingScoreAndLevel(w){
-    if(w<20)return{score:0,level:'Below A1'};
-    if(w<50)return{score:1,level:'A1'};
-    if(w<100)return{score:2,level:'A2'};
-    if(w<150)return{score:3,level:'B1'};
-    if(w<200)return{score:4,level:'B2'};
-    return{score:5,level:'C1'};
+  document.getElementById('btnEmail').addEventListener('click',()=>{
+    const wc = wordCount(document.getElementById('emailText').value);
+    document.getElementById('resultEmail').innerHTML = `<strong>Email Word Count:</strong> ${wc}`;
+    showWritingEvaluation('email', 'emailText', 'resultEmail');
+  });
+
+  // ===== Auto Writing Level =====
+  function writingScoreAndLevel(w) {
+    if (w < 10) return { score: 0, level: 'Below A1' };
+    if (w < 20) return { score: 1, level: 'A1' };
+    if (w < 50) return { score: 2, level: 'A2' };
+    if (w < 100) return { score: 3, level: 'B1' };
+    if (w < 200) return { score: 4, level: 'B2' };
+    return { score: 5, level: 'C1' };
   }
 
- function determineCEFR(r){
-  const a1Full = r.A1 >= 4; // passed A1
-  const a2Full = r.A2 >= 4; // passed A2
-  const b1Full = r.B1 >= 4; // passed B1
+  // ===== Examiner Partial Credit Section =====
+  function showWritingEvaluation(sectionId, textId, resultId) {
+    const writingText = document.getElementById(textId).value.trim();
+    const wc = writingText.split(/\s+/).filter(Boolean).length;
+    const auto = writingScoreAndLevel(wc);
 
-  if (a1Full && a2Full && b1Full) return 'B1';
-  if (a1Full && a2Full) return 'A2';
-  if (a1Full) return 'A1';
-  return 'Below A1';
-}
+    const container = document.getElementById(resultId);
+    container.innerHTML = `
+      <p><strong>Word Count:</strong> ${wc}</p>
+      <p><strong>Auto Level:</strong> ${auto.level} (Base Score: ${auto.score})</p>
+      <hr>
+      <h4>Examiner Partial Credits (0–5 each)</h4>
+      <label>Formatting: <input type="number" id="${sectionId}_fmt" min="0" max="5" value="0"></label><br>
+      <label>Structure: <input type="number" id="${sectionId}_str" min="0" max="5" value="0"></label><br>
+      <label>Grammar: <input type="number" id="${sectionId}_grm" min="0" max="5" value="0"></label><br>
+      <label>Vocabulary: <input type="number" id="${sectionId}_vocab" min="0" max="5" value="0"></label><br><br>
+      <button onclick="computeFinalWritingScore('${sectionId}', ${auto.score})">Compute Final Score</button>
+      <div id="${sectionId}_final" style="margin-top:10px;font-weight:bold;"></div>
+    `;
+  }
 
-  document.getElementById('btnExportPDF').addEventListener('click',()=>{
+  window.computeFinalWritingScore = function(sectionId, baseScore) {
+    const fmt = +document.getElementById(sectionId + "_fmt").value || 0;
+    const str = +document.getElementById(sectionId + "_str").value || 0;
+    const grm = +document.getElementById(sectionId + "_grm").value || 0;
+    const vocab = +document.getElementById(sectionId + "_vocab").value || 0;
+    const total = baseScore + fmt + str + grm + vocab;
+    document.getElementById(sectionId + "_final").innerText =
+      `Total Adjusted Score: ${total}/25`;
+  }
+
+  function determineCEFR(r){
+    const a1Full = r.A1 >= 4;
+    const a2Full = r.A2 >= 4;
+    const b1Full = r.B1 >= 4;
+    if (a1Full && a2Full && b1Full) return 'B1';
+    if (a1Full && a2Full) return 'A2';
+    if (a1Full) return 'A1';
+    return 'Below A1';
+  }
+
+  // ===== Save to PDF =====
+  document.getElementById('btnSavePDF').addEventListener('click',()=>{
     const {jsPDF}=window.jspdf;
     const doc=new jsPDF();
     const name=document.getElementById('candidateName').value.trim()||'(No name)';
+
+    // reading totals
     const getScore=id=>parseInt((document.getElementById('result'+id)?.innerText.match(/\d+/)||[0])[0]);
-    const rs={A1:getScore('A1T1')+getScore('A1T2'),A2:getScore('A2T1')+getScore('A2T2'),B1:getScore('B1T1')+getScore('B1T2')};
-    const essayW=getScore('Essay');const emailW=getScore('Email');
-    const essayEval=writingScoreAndLevel(essayW);const emailEval=writingScoreAndLevel(emailW);
+    const rs={A1:getScore('A1T1')+getScore('A1T2'),A2:getScore('A2T1')+getScore('A2T2')+getScore('A2T3'),B1:getScore('B1T1')+getScore('B1T2')+getScore('B1T3')};
+
+    // writing counts and evaluations
+    const essayText=document.getElementById('essayText').value.trim();
+    const essayW=wordCount(essayText);
+    const emailText=document.getElementById('emailText').value.trim();
+    const emailW=wordCount(emailText);
+
+    const essayEval=writingScoreAndLevel(essayW);
+    const emailEval=writingScoreAndLevel(emailW);
     const readingLevel=determineCEFR(rs);
+
+    // examiner partial scores
+    const essayFmt=+document.getElementById('essay_fmt')?.value||0;
+    const essayStr=+document.getElementById('essay_str')?.value||0;
+    const essayGrm=+document.getElementById('essay_grm')?.value||0;
+    const essayVocab=+document.getElementById('essay_vocab')?.value||0;
+    const essayFinal=essayEval.score+essayFmt+essayStr+essayGrm+essayVocab;
+
+    const emailFmt=+document.getElementById('email_fmt')?.value||0;
+    const emailStr=+document.getElementById('email_str')?.value||0;
+    const emailGrm=+document.getElementById('email_grm')?.value||0;
+    const emailVocab=+document.getElementById('email_vocab')?.value||0;
+    const emailFinal=emailEval.score+emailFmt+emailStr+emailGrm+emailVocab;
+
+    // ===== PDF layout =====
     let y=20;
-    doc.setFontSize(16);doc.text(`Candidate: ${name}`,10,y);y+=10;
-    doc.setFontSize(14);doc.text('Reading Comprehension',10,y);y+=8;doc.setFontSize(12);
-    doc.text(`A1 Total: ${rs.A1}`,10,y);y+=6;doc.text(`A2 Total: ${rs.A2}`,10,y);y+=6;doc.text(`B1 Total: ${rs.B1}`,10,y);y+=8;
-    doc.text(`Highest Reading Level: ${readingLevel}`,10,y);y+=12;
-    doc.setFontSize(14);doc.text('Writing Results',10,y);y+=8;doc.setFontSize(12);
-    doc.text(`Essay Word Count: ${essayW} → Level: ${essayEval.level}`,10,y);y+=6;
-    doc.text(`Email Word Count: ${emailW} → Level: ${emailEval.level}`,10,y);y+=10;
-    doc.setFontSize(14);doc.text('Overall Summary',10,y);y+=8;doc.setFontSize(12);
-    doc.text(`Reading Level: ${readingLevel}`,10,y);y+=6;
-    doc.text(`Writing Level: ${essayEval.level===emailEval.level?essayEval.level:essayEval.level+'/'+emailEval.level}`,10,y);y+=10;
+    doc.setFontSize(16); doc.text(`Candidate: ${name}`,10,y); y+=10;
+    doc.setFontSize(14); doc.text('Reading Comprehension',10,y); y+=8; doc.setFontSize(12);
+    doc.text(`A1 Total: ${rs.A1}`,10,y); y+=6;
+    doc.text(`A2 Total: ${rs.A2}`,10,y); y+=6;
+    doc.text(`B1 Total: ${rs.B1}`,10,y); y+=8;
+    doc.text(`Highest Reading Level: ${readingLevel}`,10,y); y+=12;
+    doc.setFontSize(14); doc.text('Writing Results',10,y); y+=8; doc.setFontSize(12);
+    doc.text(`Essay Word Count: ${essayW} → Level: ${essayEval.level}`,10,y); y+=6;
+    doc.text(`  Formatting: ${essayFmt}  Structure: ${essayStr}  Grammar: ${essayGrm}  Vocabulary: ${essayVocab}`,10,y); y+=6;
+    doc.text(`  Final Adjusted Score: ${essayFinal}/25`,10,y); y+=8;
+    doc.text(`Email Word Count: ${emailW} → Level: ${emailEval.level}`,10,y); y+=6;
+    doc.text(`  Formatting: ${emailFmt}  Structure: ${emailStr}  Grammar: ${emailGrm}  Vocabulary: ${emailVocab}`,10,y); y+=6;
+    doc.text(`  Final Adjusted Score: ${emailFinal}/25`,10,y); y+=10;
+    doc.setFontSize(14); doc.text('Overall Summary',10,y); y+=8; doc.setFontSize(12);
+    doc.text(`Reading Level: ${readingLevel}`,10,y); y+=6;
+    doc.text(`Writing Level: ${essayEval.level===emailEval.level?essayEval.level:essayEval.level+'/'+emailEval.level}`,10,y); y+=10;
     doc.text('End of Report',10,y);
     const filename=`${name.replace(/\s+/g,'_')||'Candidate'}_Results.pdf`;
     doc.save(filename);
   });
 });
 </script>
-</body>
-</html>
