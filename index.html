@@ -407,17 +407,91 @@ document.addEventListener('DOMContentLoaded', () => {
     showWritingEvaluation('email','emailText','resultEmail');
   });
 
-  // PDF Export
-  document.getElementById('btnSavePDF').addEventListener('click',()=>{
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const name = document.getElementById('candidateName').value.trim() || '(No name)';
-    doc.setFontSize(14);
-    doc.text(`Candidate: ${name}`,10,15);
-    doc.text('Results Summary',10,25);
-    doc.save(`${name.replace(/\s+/g,'_')||'Candidate'}_Results.pdf`);
-  });
 });
 </script>
 </body>
+
+<script>
+document.getElementById('btnSavePDF').addEventListener('click', async () => {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  let y = 15;
+  doc.setFontSize(14);
+  doc.text("Skilled-Jobs English Test Results", 105, y, { align: "center" });
+  y += 10;
+  doc.setFontSize(11);
+
+  // Reading Tests Results
+  doc.text("📘 Reading Test Results:", 10, y);
+  y += 8;
+  const tests = document.querySelectorAll(".level");
+  tests.forEach(section => {
+    const title = section.querySelector("h2")?.innerText || "";
+    const result = section.querySelector(".result")?.innerText || "Not answered";
+    if (title.includes("Test")) {
+      doc.text(`${title}: ${result}`, 10, y);
+      y += 7;
+    }
+  });
+
+  // Essay Section
+  y += 8;
+  const essayText = document.getElementById("essayText").value.trim();
+  const essayWords = essayText.split(/\s+/).filter(Boolean).length;
+  const essayLevel = writingScoreAndLevel(essayWords);
+  doc.text("✍️ Writing Task 1 – Essay", 10, y); y += 7;
+  doc.text(`Word count: ${essayWords} | Level: ${essayLevel.level}`, 10, y); y += 7;
+  doc.text("Response:", 10, y); y += 7;
+  const essayLines = doc.splitTextToSize(essayText || "No response.", 180);
+  doc.text(essayLines, 10, y);
+  y += essayLines.length * 7;
+
+  // Email Section
+  y += 10;
+  const emailText = document.getElementById("emailText").value.trim();
+  const emailWords = emailText.split(/\s+/).filter(Boolean).length;
+  const emailLevel = writingScoreAndLevel(emailWords);
+  doc.text("📧 Writing Task 2 – Email", 10, y); y += 7;
+  doc.text(`Word count: ${emailWords} | Level: ${emailLevel.level}`, 10, y); y += 7;
+  doc.text("Response:", 10, y); y += 7;
+  const emailLines = doc.splitTextToSize(emailText || "No response.", 180);
+  doc.text(emailLines, 10, y);
+  y += emailLines.length * 7;
+
+  // Summary
+  y += 10;
+  doc.setFontSize(12);
+  doc.text("Final Summary", 10, y);
+  y += 7;
+  const totalReading = [...document.querySelectorAll('.result')]
+    .filter(r => r.innerText.includes('Score'))
+    .map(r => {
+      const m = r.innerText.match(/Score:\s*(\d+)/);
+      return m ? parseInt(m[1]) : 0;
+    });
+  const avgReading = totalReading.length ? 
+    (totalReading.reduce((a,b)=>a+b,0)/totalReading.length).toFixed(1) : 0;
+
+  doc.setFontSize(11);
+  doc.text(`Average Reading Score: ${avgReading}`, 10, y);
+  y += 7;
+  doc.text(`Essay Level: ${essayLevel.level}`, 10, y);
+  y += 7;
+  doc.text(`Email Level: ${emailLevel.level}`, 10, y);
+
+  // Save
+  doc.save("English_Test_Results.pdf");
+});
+
+// Writing Level Scoring
+function writingScoreAndLevel(w){
+  if(w < 10) return {score:0, level:'Below A1'};
+  if(w < 20) return {score:1, level:'A1'};
+  if(w <= 50) return {score:2, level:'A2'};
+  if(w <= 100) return {score:3, level:'B1'};
+  if(w <= 200) return {score:4, level:'B2'};
+  return {score:5, level:'C1'};
+}
+</script>
 </html>
