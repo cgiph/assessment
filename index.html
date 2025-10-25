@@ -6,7 +6,7 @@
   <title>Skilled-Jobs English: Reading & Writing Tests</title>
   <style>
     :root {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
       color: #0f172a;
     }
     body {
@@ -21,10 +21,7 @@
       justify-content: space-between;
       gap: 12px;
     }
-    h1 {
-      font-size: 1.25rem;
-      margin: 0;
-    }
+    h1 { font-size: 1.25rem; margin: 0; }
     .name-field {
       font-size: 0.95rem;
       border: 1px solid #cbd5e1;
@@ -39,10 +36,7 @@
       margin: 18px 0;
       background: #ffffff;
     }
-    h2 {
-      font-size: 1.05rem;
-      margin: 6px 0;
-    }
+    h2 { font-size: 1.05rem; margin: 6px 0; }
     .passage {
       background: #fafafa;
       padding: 10px;
@@ -51,72 +45,16 @@
       margin-bottom: 10px;
       font-size: 0.95rem;
     }
-    .question {
-      margin: 8px 0;
-      padding: 8px;
-      border-left: 3px solid #e6eef8;
-      border-radius: 4px;
-    }
-    label {
-      display: block;
-      cursor: pointer;
-      margin: 3px 0;
-    }
-    .short-answer {
-      width: 100%;
-      min-height: 44px;
-      padding: 8px;
-      border: 1px solid #e6eef8;
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
-    .controls {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    button {
-      background: #0f172a;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .result {
-      margin-top: 12px;
-      padding: 10px;
-      border-radius: 6px;
-      background: #f8fafc;
-      border: 1px solid #e6eef8;
-      font-size: 0.95rem;
-    }
-    textarea {
-      width: 100%;
-      min-height: 140px;
-      padding: 8px;
-      border: 1px solid #e6eef8;
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
-    .hint {
-      font-size: 0.9rem;
-      color: #0f172a;
-      background: #fbfbfb;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #eef2f7;
-    }
-    footer {
-      margin-top: 22px;
-      font-size: 0.9rem;
-      color: #334155;
-    }
-    @media (max-width:700px){
-      header{flex-direction:column;align-items:flex-start}
-      .name-field{width:100%}
-    }
+    .question { margin: 8px 0; padding: 8px; border-left: 3px solid #e6eef8; border-radius: 4px; }
+    label { display: block; cursor: pointer; margin: 3px 0; }
+    .short-answer { width: 100%; min-height: 44px; padding: 8px; border: 1px solid #e6eef8; border-radius: 6px; font-size: 0.95rem; }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    button { background: #0f172a; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+    .result { margin-top: 12px; padding: 10px; border-radius: 6px; background: #f8fafc; border: 1px solid #e6eef8; font-size: 0.95rem; min-height: 26px; }
+    textarea { width: 100%; min-height: 140px; padding: 8px; border: 1px solid #e6eef8; border-radius: 6px; font-size: 0.95rem; }
+    .hint { font-size: 0.9rem; color: #0f172a; background: #fbfbfb; padding: 10px; border-radius: 6px; border: 1px solid #eef2f7; }
+    footer { margin-top: 22px; font-size: 0.9rem; color: #334155; }
+    @media (max-width:700px){ header{flex-direction:column;align-items:flex-start} .name-field{width:100%} }
   </style>
 </head>
 <body>
@@ -133,6 +71,8 @@
   <strong>Instructions:</strong> Open this file on Chrome. Complete all sections.
   After finishing, follow Final Instructions at the bottom to save your test and send it to the assessor.
 </p>
+
+<!-- READING & WRITING SECTIONS (unchanged content) -->
 <section class="level" id="A1T1">
   <h2>A1 Test 1 – Reading</h2>
   <div class="passage">Mark takes bus number 6 to go to work every morning. He usually sits near the window and reads the newspaper. The bus stop is close to his house.</div>
@@ -154,6 +94,7 @@
   <div class="controls"><button id="btnA1T1">Submit</button></div>
   <div id="resultA1T1" class="result"></div>
 </section>
+
 <section class="level" id="A1T2">
   <h2>A1 Test 2 – Reading</h2>
   <div class="passage">
@@ -171,7 +112,7 @@
   <div class="controls"><button id="btnA1T2">Submit</button></div>
   <div id="resultA1T2" class="result"></div>
 </section>
-  <!-- ======== A2T1 ======== -->
+
 <section class="level" id="A2T1">
   <h2>A2 Test 1 – Reading</h2>
   <div class="passage">
@@ -189,7 +130,7 @@
   <div class="controls"><button id="btnA2T1">Submit</button></div>
   <div id="resultA2T1" class="result"></div>
 </section>
-  <!-- ======== A2T2 ======== -->
+
 <section class="level" id="A2T2">
   <h2>A2 Test 2 – Reading</h2>
   <div class="passage">
@@ -208,7 +149,6 @@
   <div id="resultA2T2" class="result"></div>
 </section>
 
-<!-- ======== A2T3 ======== -->
 <section class="level" id="A2T3">
   <h2>A2 Test 3 – Workplace Interaction</h2>
   <div class="passage">
@@ -225,7 +165,6 @@
   <div id="resultA2T3" class="result"></div>
 </section>
 
-  <!-- ======== B1T1 ======== -->
 <section class="level" id="B1T1">
   <h2>B1 Test 1 – Reading</h2>
   <div class="passage">
@@ -244,7 +183,6 @@
   <div id="resultB1T1" class="result"></div>
 </section>
 
-  <!-- ======== B1T2 ======== -->
 <section class="level" id="B1T2">
   <h2>B1 Test 2 – Reading</h2>
   <div class="passage">
@@ -263,7 +201,6 @@
   <div id="resultB1T2" class="result"></div>
 </section>
 
-  <!-- ======== B1T3 ======== -->
 <section class="level" id="B1T3">
   <h2>B1 Test 3 – Reading</h2>
   <div class="passage">
@@ -277,40 +214,22 @@
   <div id="resultB1T3" class="result"></div>
 </section>
 
-<!-- ======== Writing Essay ======== -->
 <section class="level" id="Essay">
   <h2>Writing Task 1 – Essay</h2>
   <p>Write an essay not less than 100 words: <strong>Why learning English is important for your future job.</strong></p>
   <textarea id="essayText" placeholder="Write your essay here..."></textarea>
-  <div class="examiner-inputs">
-    <strong>Examiner Partial Credit:</strong>
-    <label>Formatting: <input type="number" id="essayFormat" min="0" max="5"></label>
-    <label>Structure: <input type="number" id="essayStructure" min="0" max="5"></label>
-    <label>Grammar: <input type="number" id="essayGrammar" min="0" max="5"></label>
-    <label>Vocabulary: <input type="number" id="essayVocab" min="0" max="5"></label>
-  </div>
   <div class="controls"><button id="btnEssay">Submit</button></div>
   <div id="resultEssay" class="result"></div>
 </section>
 
-<!-- ======== Writing Email ======== -->
 <section class="level" id="Email">
   <h2>Writing Task 2 – Email</h2>
   <p>Your team leader emailed you about a mentorship program for the new apprentice, Leonard. <strong>Write your email reply not less than 40 words.</strong></p>
   <textarea id="emailText" placeholder="Write your email here..."></textarea>
-  <div class="examiner-inputs">
-    <strong>Examiner Partial Credit:</strong>
-    <label>Formatting: <input type="number" id="emailFormat" min="0" max="5"></label>
-    <label>Structure: <input type="number" id="emailStructure" min="0" max="5"></label>
-    <label>Grammar: <input type="number" id="emailGrammar" min="0" max="5"></label>
-    <label>Vocabulary: <input type="number" id="emailVocab" min="0" max="5"></label>
-  </div>
   <div class="controls"><button id="btnEmail">Submit</button></div>
   <div id="resultEmail" class="result"></div>
 </section>
-  
 
-<!-- ======== Final Instructions ======== -->
 <div class="hint" id="finalInstructions">
   <strong>Final instructions (candidates):</strong>
   <ol>
@@ -324,186 +243,253 @@
   <button id="btnSavePDF">Save Results to PDF</button>
 </footer>
 
+<!-- jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const getRadioScore = (name, val) => {
-    const r = document.querySelector('input[name="'+name+'"]:checked');
-    return r && r.value === val ? 1 : 0;
-  };
-  const getTextScore = (id, ans) => {
-    const t = document.getElementById(id).value.trim().toLowerCase();
-    return t.includes(ans) ? 1 : 0;
-  };
-  const wordCount = s => s.trim().split(/\s+/).filter(Boolean).length;
 
-  // Reading Tests
-  const readingTests = [
-    {btn:'btnA1T1',id:'A1T1',score:()=>getRadioScore('a1t1_q1','6')+getRadioScore('a1t1_q2','mark')+getTextScore('a1t1_q3','bus')},
-    {btn:'btnA1T2',id:'A1T2',score:()=>getRadioScore('a1t2_q1','plumber')+getTextScore('a1t2_q2','12:30')},
-    {btn:'btnA2T1',id:'A2T1',score:()=>getRadioScore('a2t1_q1','beach')+getTextScore('a2t1_q2','leader')},
-    {btn:'btnA2T2',id:'A2T2',score:()=>getRadioScore('a2t2_q1','experience')+getTextScore('a2t2_q2','start')},
-    {btn:'btnA2T3',id:'A2T3',score:()=>getRadioScore('a2t3_q1','b')},
-    {btn:'btnB1T1',id:'B1T1',score:()=>getRadioScore('b1t1_q1','language')+getTextScore('b1t1_q2','communicate')},
-    {btn:'btnB1T2',id:'B1T2',score:()=>getRadioScore('b1t2_q1','safety')+getTextScore('b1t2_q2','wearing')},
-    {btn:'btnB1T3',id:'B1T3',score:()=>getTextScore('b1t3_q1','apologize')+getTextScore('b1t3_q1','sorry')}
+<script>
+/*
+  Single, consolidated script:
+  - submit buttons compute and display scores/results in each .result box
+  - PDF button collects the shown results and writing word counts/levels and saves a tidy PDF
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Utility: normalize short answer (lowercase, collapse punctuation/extra spaces)
+  function normalizeText(s){
+    return (s||'').toString().trim().toLowerCase().replace(/[^\w\s:]/g,'').replace(/\s+/g,' ');
+  }
+
+  // Compare short-answer with one or multiple acceptable tokens
+  function shortAnswerMatches(id, acceptable){
+    const val = normalizeText(document.getElementById(id).value);
+    if(!val) return false;
+    acceptable = Array.isArray(acceptable) ? acceptable : [acceptable];
+    return acceptable.some(a => {
+      const n = normalizeText(a);
+      return n && (val === n || val.includes(n) || n.includes(val));
+    });
+  }
+
+  // Radio check helper
+  function radioIs(name, value){
+    const r = document.querySelector('input[name="'+name+'"]:checked');
+    return r && r.value === value;
+  }
+
+  // Word count helper
+  function countWords(s){
+    if(!s) return 0;
+    return s.trim().split(/\s+/).filter(Boolean).length;
+  }
+
+  // CEFR mapping for writing (based on word count)
+  function writingScoreAndLevel(w){
+    if(w < 10) return {score:0,level:'Below A1'};
+    if(w < 20) return {score:1,level:'A1'};
+    if(w < 50) return {score:2,level:'A2'};
+    if(w < 100) return {score:3,level:'B1'};
+    if(w < 200) return {score:4,level:'B2'};
+    return {score:5,level:'C1'};
+  }
+
+  // Attach handlers for reading tests
+  const readingHandlers = [
+    {
+      btnId: 'btnA1T1',
+      resultId: 'resultA1T1',
+      run: () => {
+        let score = 0;
+        score += radioIs('a1t1_q1','6') ? 1 : 0;
+        score += radioIs('a1t1_q2','mark') ? 1 : 0;
+        score += shortAnswerMatches('a1t1_q3', ['bus','bus transport','bus']); // accept variants
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnA1T2',
+      resultId: 'resultA1T2',
+      run: () => {
+        let score = 0;
+        score += radioIs('a1t2_q1','plumber') ? 1 : 0;
+        // accept "12:30", "half past 12", "12.30", "12:30pm" etc.
+        const t = normalizeText(document.getElementById('a1t2_q2').value);
+        if(t && (t.includes('12:30') || t.includes('1230') || t.includes('half past 12') || t.includes('12.30'))) score += 1;
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnA2T1',
+      resultId: 'resultA2T1',
+      run: () => {
+        let score = 0;
+        score += radioIs('a2t1_q1','beach') ? 1 : 0;
+        score += shortAnswerMatches('a2t1_q2', ['leader','i lead','lead a group','sales lead','sales rep lead']);
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnA2T2',
+      resultId: 'resultA2T2',
+      run: () => {
+        let score = 0;
+        score += radioIs('a2t2_q1','experience') ? 1 : 0;
+        score += shortAnswerMatches('a2t2_q2', ['learn the ropes','learn the ropes','start','become efficient','learn']);
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnA2T3',
+      resultId: 'resultA2T3',
+      run: () => {
+        // best answer is 'b'
+        let score = radioIs('a2t3_q1','b') ? 1 : 0;
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnB1T1',
+      resultId: 'resultB1T1',
+      run: () => {
+        let score = 0;
+        score += radioIs('b1t1_q1','language') ? 1 : 0;
+        score += shortAnswerMatches('b1t1_q2', ['communicate','communicate effectively','communication']);
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnB1T2',
+      resultId: 'resultB1T2',
+      run: () => {
+        let score = 0;
+        score += radioIs('b1t2_q1','safety') ? 1 : 0;
+        score += shortAnswerMatches('b1t2_q2', ['gloves','goggles','helmets','wearing gloves','wearing goggles','wearing helmets','wearing']);
+        return {text:`Score: ${score}`};
+      }
+    },
+    {
+      btnId: 'btnB1T3',
+      resultId: 'resultB1T3',
+      run: () => {
+        // expected: leader apologises and explains fix
+        const ok = shortAnswerMatches('b1t3_q1',['apologize','sorry','explain','we are fixing','we are addressing']);
+        return {text:`Score: ${ok ? 1 : 0}`};
+      }
+    }
   ];
 
-  readingTests.forEach(t=>{
-    const btn=document.getElementById(t.btn);
+  // wire reading handlers
+  readingHandlers.forEach(h => {
+    const btn = document.getElementById(h.btnId);
     if(btn){
-      btn.addEventListener('click',()=>{
-        const s=t.score();
-        document.getElementById('result'+t.id).innerHTML=`<strong>Score:</strong> ${s}`;
+      btn.addEventListener('click', () => {
+        const res = h.run();
+        const out = document.getElementById(h.resultId);
+        if(out) out.innerHTML = `<strong>${res.text}</strong>`;
       });
     }
   });
 
-  // Writing Word Count + Examiner Partial Scores
-  function writingScoreAndLevel(w){
-    if(w<10)return{score:0,level:'Below A1'};
-    if(w<20)return{score:1,level:'A1'};
-    if(w<50)return{score:2,level:'A2'};
-    if(w<100)return{score:3,level:'B1'};
-    if(w<200)return{score:4,level:'B2'};
-    return{score:5,level:'C1'};
-  }
-
-  function showWritingEvaluation(sectionId, textId, resultId){
-    const writingText=document.getElementById(textId).value.trim();
-    const wc=writingText.split(/\s+/).filter(Boolean).length;
-    const auto=writingScoreAndLevel(wc);
-    const container=document.getElementById(resultId);
-    container.innerHTML=`
-      <p><strong>Word Count:</strong> ${wc}</p>
-      <p><strong>Auto Level:</strong> ${auto.level} (Base Score: ${auto.score})</p>
-      <hr>
-      <h4>Examiner Partial Credits (0–5 each)</h4>
-      <label>Formatting: <input type="number" id="${sectionId}_fmt" min="0" max="5" value="0"></label><br>
-      <label>Structure: <input type="number" id="${sectionId}_str" min="0" max="5" value="0"></label><br>
-      <label>Grammar: <input type="number" id="${sectionId}_grm" min="0" max="5" value="0"></label><br>
-      <label>Vocabulary: <input type="number" id="${sectionId}_vocab" min="0" max="5" value="0"></label><br><br>
-      <button onclick="computeFinalWritingScore('${sectionId}', ${auto.score})">Compute Final Score</button>
-      <div id="${sectionId}_final" style="margin-top:10px;font-weight:bold;"></div>
-    `;
-  }
-
-  window.computeFinalWritingScore = function(sectionId, baseScore){
-    const fmt=+document.getElementById(sectionId+"_fmt").value||0;
-    const str=+document.getElementById(sectionId+"_str").value||0;
-    const grm=+document.getElementById(sectionId+"_grm").value||0;
-    const vocab=+document.getElementById(sectionId+"_vocab").value||0;
-    const total=baseScore+fmt+str+grm+vocab;
-    document.getElementById(sectionId+"_final").innerText=`Total Adjusted Score: ${total}/25`;
-  };
-
-  // Essay
-  document.getElementById('btnEssay').addEventListener('click',()=>{
-    showWritingEvaluation('essay','essayText','resultEssay');
+  // Writing submit handlers (compute word count + level and display)
+  document.getElementById('btnEssay').addEventListener('click', () => {
+    const text = document.getElementById('essayText').value || '';
+    const wc = countWords(text);
+    const lvl = writingScoreAndLevel(wc);
+    document.getElementById('resultEssay').innerHTML = `<strong>Word count:</strong> ${wc} — <strong>Level:</strong> ${lvl.level}`;
   });
 
-  // Email
-  document.getElementById('btnEmail').addEventListener('click',()=>{
-    showWritingEvaluation('email','emailText','resultEmail');
+  document.getElementById('btnEmail').addEventListener('click', () => {
+    const text = document.getElementById('emailText').value || '';
+    const wc = countWords(text);
+    const lvl = writingScoreAndLevel(wc);
+    document.getElementById('resultEmail').innerHTML = `<strong>Word count:</strong> ${wc} — <strong>Level:</strong> ${lvl.level}`;
   });
 
-});
-  // Add global writingScoreAndLevel before PDF save
-  function writingScoreAndLevel(w){
-    if(w < 10) return {score:0, level:'Below A1'};
-    if(w < 20) return {score:1, level:'A1'};
-    if(w <= 50) return {score:2, level:'A2'};
-    if(w <= 100) return {score:3, level:'B1'};
-    if(w <= 200) return {score:4, level:'B2'};
-    return {score:5, level:'C1'};
-  }
-
-  // --- PDF GENERATION SECTION ---
+  // PDF generator: collects visible .result fields and writing results
   document.getElementById('btnSavePDF').addEventListener('click', async () => {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    let y = 15;
-    doc.setFontSize(14);
-    doc.text("Skilled-Jobs English Test Results", 105, y, { align: "center" });
-    y += 10;
+    const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+    let y = 50;
+    doc.setFontSize(16);
+    const candidate = (document.getElementById('candidateName').value || '(No name)').trim();
+    doc.text("Skilled-Jobs English Test Results", 300, y, { align: 'center' });
+    y += 30;
     doc.setFontSize(11);
+    doc.text(`Candidate: ${candidate}`, 40, y);
+    y += 20;
 
-    // Reading Test Results
-    doc.text("Reading Test Results:", 10, y);
-    y += 8;
-    const tests = document.querySelectorAll(".level");
-    tests.forEach(section => {
-      const title = section.querySelector("h2")?.innerText || "";
-      const result = section.querySelector(".result")?.innerText || "Not answered";
-      if (title.includes("Test")) {
-        doc.text(`${title}: ${result}`, 10, y);
-        y += 7;
+    doc.setFontSize(13);
+    doc.text("Reading Test Results", 40, y);
+    y += 18;
+    doc.setFontSize(10);
+
+    // loop sections with h2 and result
+    document.querySelectorAll('.level').forEach(section => {
+      const h = section.querySelector('h2') ? section.querySelector('h2').innerText : '';
+      const r = section.querySelector('.result') ? section.querySelector('.result').innerText : '';
+      // include tests & writing sections
+      if(h){
+        // wrap if text lengthy
+        const label = `${h}:`;
+        const combined = r ? `${label} ${r}` : `${label} Not answered`;
+        const lines = doc.splitTextToSize(combined, 500);
+        doc.text(lines, 40, y);
+        y += lines.length * 14;
+        if(y > 740){ doc.addPage(); y = 40; } // new page if near bottom
       }
     });
 
-    // Essay Section
-    y += 8;
-    const essayText = document.getElementById("essayText").value.trim();
-    const essayWords = essayText.split(/\s+/).filter(Boolean).length;
+    // If essay/email results were not computed with Submit, compute now for PDF
+    const essayText = document.getElementById('essayText').value || '';
+    const essayWords = countWords(essayText);
     const essayLevel = writingScoreAndLevel(essayWords);
-    doc.text("Writing Task 1 – Essay", 10, y); y += 7;
-    doc.text(`Word count: ${essayWords} | Level: ${essayLevel.level}`, 10, y); y += 7;
-    doc.text("Response:", 10, y); y += 7;
-    const essayLines = doc.splitTextToSize(essayText || "No response.", 180);
-    doc.text(essayLines, 10, y);
-    y += essayLines.length * 7;
 
-    // Email Section
-    y += 10;
-    const emailText = document.getElementById("emailText").value.trim();
-    const emailWords = emailText.split(/\s+/).filter(Boolean).length;
+    const emailText = document.getElementById('emailText').value || '';
+    const emailWords = countWords(emailText);
     const emailLevel = writingScoreAndLevel(emailWords);
-    doc.text("Writing Task 2 – Email", 10, y); y += 7;
-    doc.text(`Word count: ${emailWords} | Level: ${emailLevel.level}`, 10, y); y += 7;
-    doc.text("Response:", 10, y); y += 7;
-    const emailLines = doc.splitTextToSize(emailText || "No response.", 180);
-    doc.text(emailLines, 10, y);
-    y += emailLines.length * 7;
 
-    // Summary
+    // Final summary block
     y += 10;
+    if(y > 740){ doc.addPage(); y = 40; }
     doc.setFontSize(12);
-    doc.text("Final Summary", 10, y);
-    y += 7;
+    doc.text("Final Summary", 40, y); y += 16;
+    doc.setFontSize(11);
 
-    const totalReading = [...document.querySelectorAll('.result')]
-      .filter(r => r.innerText.includes('Score'))
-      .map(r => {
-        const m = r.innerText.match(/Score:\s*(\d+)/);
-        return m ? parseInt(m[1]) : 0;
+    // Compute average reading score from displayed result boxes (those that contain "Score:")
+    const readingScores = Array.from(document.querySelectorAll('.result'))
+      .map(el => el.innerText)
+      .filter(t => t && t.match(/Score:/))
+      .map(t => {
+        const m = t.match(/Score:\s*(\d+(\.\d+)?)/);
+        return m ? Number(m[1]) : 0;
       });
 
-    const avgReading = totalReading.length ?
-      (totalReading.reduce((a,b)=>a+b,0)/totalReading.length).toFixed(1) : 0;
+    const avgReading = readingScores.length ? (readingScores.reduce((a,b)=>a+b,0)/readingScores.length) : 0;
+    const avgReadingRounded = (Math.round(avgReading*10)/10).toFixed(1);
 
-    // CEFR interpretation
-    function readingLevelFromScore(score) {
-      if (score < 0.5) return { level: 'Below A1', percent: '0–19%' }
-      if (score < 1.5) return { level: 'A1', percent: '20–39%' };
-      if (score < 2.5) return { level: 'A2', percent: '40–59%' };
-      if (score < 3.5) return { level: 'B1', percent: '60–74%' };
-      if (score < 4.5) return { level: 'B2', percent: '75–89%' };
-      return { level: 'C1', percent: '90–100%' };
+    // map numeric average to CEFR + percentage (same mapping you requested)
+    function readingLevelFromScore(score){
+      // score is expected as numeric average (0..5 scale)
+      if(score < 0.5) return {level:'Below A1', percent:'0–19%'};
+      if(score < 1.5) return {level:'A1', percent:'20–39%'};
+      if(score < 2.5) return {level:'A2', percent:'40–59%'};
+      if(score < 3.5) return {level:'B1', percent:'60–74%'};
+      if(score < 4.5) return {level:'B2', percent:'75–89%'};
+      return {level:'C1', percent:'90–100%'};
     }
-    const avgInfo = readingLevelFromScore(avgReading);
+    const avgInfo = readingLevelFromScore(Number(avgReadingRounded));
 
-    // --- Output summary ---
-    doc.setFontSize(11);
-    doc.text(`Average Reading Score: ${avgReading} (${avgInfo.level}, ${avgInfo.percent})`, 10, y);
-    y += 7;
-    doc.text(`Essay Level: ${essayLevel.level}`, 10, y);
-    y += 7;
-    doc.text(`Email Level: ${emailLevel.level}`, 10, y);
+    doc.text(`Average Reading Score: ${avgReadingRounded} (${avgInfo.level}, ${avgInfo.percent})`, 40, y); y += 16;
+    doc.text(`Essay: ${essayWords} words — Level: ${essayLevel.level}`, 40, y); y += 14;
+    doc.text(`Email: ${emailWords} words — Level: ${emailLevel.level}`, 40, y); y += 14;
 
-    // Save
-    doc.save("English_Test_Results.pdf");
+    // Save PDF
+    const filename = `${candidate.replace(/\s+/g,'_') || 'Candidate'}_English_Test_Results.pdf`;
+    doc.save(filename);
   });
-});
+
+}); // DOMContentLoaded
 </script>
+
+</body>
 </html>
